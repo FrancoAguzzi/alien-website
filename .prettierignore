@@ -1,0 +1,20 @@
+# Ignore JavaScript files from external/minified libraries
+src/**/*.min.js
+src/assets/http-streaming.js
+src/assets/scripts/plugins.js
+src/assets/videoJsPlugins/dai.js
+src/assets/videoJsPlugins/videojs-contrib-ads.js
+src/assets/videoJsPlugins/videojs.pip.js
+src/assets/videoJsPlugins/videojs.vr.js
+src/assets/videoJsPlugins/visualizer.js
+
+# Ignore CSS/SCSS files from external/minified libraries
+src/**/*.min.css
+src/**/*.min.scss
+src/assets/videoJsPlugins/videojs.vr.css
+
+# Ignore vtt files (subtitle files for videos)
+src/**/*.vtt
+
+# Ignore node_modules
+node_modules/
