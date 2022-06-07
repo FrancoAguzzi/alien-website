@@ -4,7 +4,7 @@
       <div class="result">
         <div class="container">
           <div class="back" @click="backButton">
-            <img src="@/assets/img/arrow-back-gray.svg" alt="" />
+            <!-- <img src="@/assets/img/arrow-back-gray.svg" alt="" /> -->
           </div>
           <div class="wrap-search">
             <input
@@ -15,8 +15,8 @@
               placeholder="Pesquise por título, autor ou genêro para buscar"
             />
             <div class="img-btn">
+                <!-- src="@/assets/img/search-loupe.svg" -->
               <img
-                src="@/assets/img/search-loupe.svg"
                 alt="Ícone de Busca"
                 @click="getSearchValue(currentTerm)"
               />
@@ -52,10 +52,10 @@
         </main>
         <div v-else class="empty-results">
           <div class="txt">
-            <img src="@/assets/img/icon-empty-results.svg" alt="" class="icon" />
+            <!-- <img src="@/assets/img/icon-empty-results.svg" alt="" class="icon" /> -->
             <h3>Nenhum resultado disponível</h3>
             <p>Tente palavras-chave diferentes. Experimente buscar tema, autor, profissional...</p>
-            <img src="@/assets/img/points-blue.svg" alt="" />
+            <!-- <img src="@/assets/img/points-blue.svg" alt="" /> -->
           </div>
         </div>
       </FadeAnimation>

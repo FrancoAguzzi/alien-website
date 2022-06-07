@@ -22,11 +22,12 @@
         placeholder="Insira sua senha"
       />
       <button class="js-btn-show-password" type="button">
-        <img src="@/assets/img/eye.svg" @click="togglePasswordShow" alt="Visualizar a senha" />
+        <!-- <img src="@/assets/img/eye.svg" @click="togglePasswordShow" alt="Visualizar a senha" /> -->
       </button>
     </div>
     <button type="button" @click="navigateToRoute('forgot-password')" class="forgot">
-      Recuperar senha <img src="@/assets/img/clock.svg" alt="Recuperar senha" />
+      Recuperar senha 
+      <!-- <img src="@/assets/img/clock.svg" alt="Recuperar senha" /> -->
     </button>
   </div>
 </template>

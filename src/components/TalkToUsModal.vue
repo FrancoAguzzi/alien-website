@@ -1,10 +1,10 @@
 <template>
   <Modal :class="isOpen ? 'show-modal' : ''" :id="'js-modal-fale-conosco'">
     <button class="close js-close-modal" type="button" @click="closeModal">
-      <img src="@/assets/img/close.svg" alt="" />
+      <!-- <img src="@/assets/img/close.svg" alt="" /> -->
     </button>
     <div class="icon">
-      <img src="img/icon-contato.svg" alt="" />
+      <!-- <img src="img/icon-contato.svg" alt="" /> -->
     </div>
     <h4>Fale conosco</h4>
     <p>Quer nos enviar alguma mensagem? Vamos conversar</p>

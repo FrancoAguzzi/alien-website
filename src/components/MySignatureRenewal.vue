@@ -3,7 +3,7 @@
     <div v-if="!userIsLifetime" class="msRenewal__header">
       <div class="msRenewal__header-title">
         <div class="icon">
-          <img src="@/assets/img/icon-repeat-filled.svg" alt="" />
+          <!-- <img src="@/assets/img/icon-repeat-filled.svg" alt="" /> -->
         </div>
         <div class="msRenewal__header-title--texts">
           <h6>Renovação automática</h6>

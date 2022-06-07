@@ -21,7 +21,7 @@
       <div class="dropdown-area" id="js-dropdown-area">
         <div class="area-search">
           <input type="text" placeholder="Pesquisa pelo seu país" id="js-search-area" />
-          <img src="../assets/img/icon-lupa.svg" alt="" class="icon" />
+          <!-- <img src="../assets/img/icon-lupa.svg" alt="" class="icon" /> -->
         </div>
         <ul id="js-list-area">
           <li

@@ -4,7 +4,8 @@
       <div class="wrap-titles">
         <img :src="icon" class="title-icon" />
         <router-link :to="showAllRoute" v-if="showAll">
-          ver todos <img src="@/assets/img/arrow-right.svg" alt="" />
+          ver todos 
+          <!-- <img src="@/assets/img/arrow-right.svg" alt="" /> -->
         </router-link>
       </div>
 

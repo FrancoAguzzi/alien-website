@@ -53,7 +53,7 @@
     &:hover {
       .icon {
         &.icon-play {
-          background-image: url('../assets/img/icon-play-hover.svg');
+          // background-image: url('../assets/img/icon-play-hover.svg');
         }
       }
     }
@@ -64,7 +64,7 @@
       background-position: center center;
       margin-right: 0.625rem;
       &.icon-play {
-        background-image: url('../assets/img/icon-play.svg');
+        // background-image: url('../assets/img/icon-play.svg');
       }
     }
   }
@@ -103,14 +103,14 @@
   .icon {
     width: 7px;
     height: 8px;
-    background: url('../assets/img/icon-plus.svg') no-repeat center center;
+    // background: url('../assets/img/icon-plus.svg') no-repeat center center;
     margin-right: 0.25rem;
   }
   &:hover {
     background: transparent;
     color: #fff;
     .icon {
-      background: url('../assets/img/icon-plus-hover.svg') no-repeat center center;
+      // background: url('../assets/img/icon-plus-hover.svg') no-repeat center center;
     }
   }
 }
@@ -119,11 +119,11 @@
   width: 32px;
   height: 32px;
   border-radius: 6px;
-  background: url('../assets/img/icon-favorite.svg') no-repeat center center;
+  // background: url('../assets/img/icon-favorite.svg') no-repeat center center;
   background-color: #202227;
   transition: all 0.3s;
   &.active {
-    background: url('../assets/img/icon-favorite-selected.svg') no-repeat center center;
+    // background: url('../assets/img/icon-favorite-selected.svg') no-repeat center center;
     background-color: #202227;
   }
 }
@@ -177,7 +177,7 @@
   .icon {
     width: 24px;
     height: 24px;
-    background: url('../assets/img/star.svg') no-repeat center center;
+    // background: url('../assets/img/star.svg') no-repeat center center;
     transition: background-image 0.3s;
   }
   span {
@@ -188,7 +188,7 @@
   }
   &:hover {
     .icon {
-      background: url('../assets/img/star-hover.svg') no-repeat center center;
+      // background: url('../assets/img/star-hover.svg') no-repeat center center;
     }
     span {
       color: $dark-900;

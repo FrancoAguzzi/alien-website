@@ -1,7 +1,7 @@
 <template>
   <Modal :class="['rcssModal', { 'show-modal': showModal }]">
     <div class="icon">
-      <img src="@/assets/img/mysignature/icon-cancel-signature.svg" alt="" />
+      <!-- <img src="@/assets/img/mysignature/icon-cancel-signature.svg" alt="" /> -->
     </div>
     <div class="rcssModal__texts">
       <h4 class="rcssModal__texts-title">Sua assinatura foi cancelada</h4>

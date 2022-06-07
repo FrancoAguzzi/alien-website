@@ -1,7 +1,7 @@
 <template>
   <div class="msRenewalItem">
     <div class="icon">
-      <img src="@/assets/img/icon-check-circle.svg" alt="" />
+      <!-- <img src="@/assets/img/icon-check-circle.svg" alt="" /> -->
     </div>
     <div class="msRenewalItem__content">
       <h6>{{ title }}</h6>

@@ -11,7 +11,7 @@
         <div>
           <input type="submit" value="Pesquisar" />
           <button type="button" id="js-close-search" @click="onClose">
-            <img src="@/assets/img/x-close.svg" alt="" />
+            <!-- <img src="@/assets/img/x-close.svg" alt="" /> -->
           </button>
         </div>
       </form>

@@ -1,11 +1,11 @@
 <template>
   <Modal :class="isOpen ? 'show-modal' : ''">
     <button class="close js-close-modal" type="button" @click="isOpen = false">
-      <img src="@/assets/img/close.svg" alt="" />
+      <!-- <img src="@/assets/img/close.svg" alt="" /> -->
     </button>
     <div class="mw__content">
+        <!-- src="@/assets/img/icon-heart-favorite-checkmark-circle.svg" -->
       <img
-        src="@/assets/img/icon-heart-favorite-checkmark-circle.svg"
         alt="Ícone do bem-vindo"
         class="mw__image"
       />
@@ -20,16 +20,16 @@
       </p>
       <div class="mw__buttons">
         <a href="https://apps.apple.com/us/app/finclass/id1575280028" rel="noopener">
+            <!-- src="@/assets/img/extensive-footer/apple_footer.svg" -->
           <img
-            src="@/assets/img/extensive-footer/apple_footer.svg"
             rel="preload"
             class="str"
             alt="Apple Store"
           />
         </a>
         <a href="https://play.google.com/store/apps/details?id=com.finclass.app" rel="noopener">
+            <!-- src="@/assets/img/extensive-footer/google_footer.svg" -->
           <img
-            src="@/assets/img/extensive-footer/google_footer.svg"
             rel="preload"
             class="str"
             alt="Google Store"

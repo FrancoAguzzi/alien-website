@@ -21,19 +21,24 @@
   </header>
 
   <main class="main">
+    <!-- TEXTO DE CAPTURA -->
+    <section class="main__first">
+      <h1 class="main__first-title">Te mostro a tatuagem que está escondida em suas ideias!</h1>
+      <h2 class="main__first-subtitle">O que mais estou acostumado são clientes que chegam até mim, com <b style="color: #000">ideias e histórias incríveis</b> mas que não conseguem unir elas com <b style="color: #000">a arte da tatuagem</b> e é exatamente aí que eu entro.
+          Me apego aos <b style="color: #000">detalhes</b> desde a nossa conversa inicial até o final da nossa sessão, isso para que você conte ainda mais <b style="color: #000">quem você é</b> através de outra linguagem, <b style="color: #000">a linguagem da arte.</b>
+      </h2>
+    </section>
+
     <!-- TEXTO + VIDEO -->
     <section class="main__welcome">
       <div class="main__welcome-wrapper">
         <h1 class="main__welcome-title">SEJA BEM-VINDO <br />À EXPERIÊNCIA ALIEN</h1>
         <h2 class="main__welcome-subtitle">
-          Lorem ipsum dolor sit amet
-          <strong style="color: #000">consectetur adipisicing elit.</strong> Provident omnis
-          voluptatum debitis nihil ipsam. Veritatis neque praesentium tempora vitae animi sequi
-          rerum at, ullam minima
-          <strong style="color: #000">fuga a natus accusamus doloremque</strong> nostrum commodi
-          quas eveniet, officia voluptate dolorum fugiat architecto repellendus.
+          <b style="color: #000">Minhas tatuagens começam muito antes do dia da sessão</b> de fato. 
+          Elas começam em nossa primeira conversa, onde busco <b style="color: #000">entender ao máximo você</b>, não apenas em suas ideias/histórias principais mas também em suas falas, expressões, ações e arquétipos.
+          Isso faz com que as tatuagens sejam <b style="color: #000">únicas e especiais para quem as carrega</b>, minha atenção e energia estão totalmente voltadas para você e para a arte.
         </h2>
-        <button class="main__welcome-cta">CTA LABEL</button>
+        <button class="main__welcome-cta">SAIBA MAIS</button>
       </div>
       <video
         id="background-video"
@@ -54,7 +59,7 @@
       <div>
         <div class="pres__rohil"></div>
         <p class="pres__description">
-          O Rohil é um artista venezuelano com aproximadamente <b>10 anos de experiência</b>, antes
+          Rohil é um artista venezuelano com aproximadamente <b>10 anos de experiência</b>, antes
           de iniciar na tatuagem cursava psicologia e vendia seus quadros para pagar a faculdade.
           Após alguns semestres resolveu largar o curso pois um amigo lhe apresentou o universo da
           tattoo e ele viu uma possibilidade de
@@ -165,24 +170,101 @@ export default {
   position: relative;
   margin: 0 auto;
 
+  &__first {
+    position: relative;
+    text-align: center;
+    background-color: $white;
+    padding: 0 0 40px;
+
+    &-title {
+      max-width: 1024px;
+      margin: 0 auto;
+      font-size: 36px;
+      line-height: 38px;
+      padding: 40px 40px 0;
+      text-shadow: 2px 2px $dark-50;
+    }
+
+    &-subtitle {
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 40px 25px 80px;
+      color: $dark-300;
+      line-height: 28px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 8px;
+      height: 4px;
+      width: 40vw;
+      max-width: 250px;
+      background-color: $dark-900;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 4px;
+      width: 50vw;
+      max-width: 300px;
+      background-color: $dark-900;
+    }
+
+    @media screen and (min-width: 450px) {  
+      &-title {
+        padding: 80px 40px 0;
+      }
+
+      &-subtitle {
+        padding: 40px 30px 120px;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      &:before,
+      &:after {
+        left: auto;
+        right: 0;
+        bottom: 16px;
+        width: 80vw;
+        max-width: unset;
+      }
+
+      &:after {
+        bottom: 0px;
+        width: 85vw;
+      }
+
+      &-title {
+        font-size: 48px;
+        line-height: 48px;
+        max-width: 800px;
+        padding-top: 160px;
+      }
+
+      &-subtitle {
+        font-size: 32px;
+        line-height: 38px;
+        padding-bottom: 160px;
+      }
+    }
+  }
+
   &__welcome {
     display: flex;
     flex-direction: column;
     max-width: 100vw;
     overflow: hidden;
-
-    &-shadow {
-      width: calc(100vw - 500px);
-      height: calc(100vh - 134.5px);
-      box-shadow: inset 0px 0px 30px 33px rgba(0, 0, 0, 0.315);
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
+    position: relative;
 
     &-wrapper {
       z-index: $second-layer;
-      // box-shadow: 0 0 30px 30px $white;
+      box-shadow: 0 0 30px 30px $white;
       padding-bottom: 40px;
     }
 
@@ -191,7 +273,7 @@ export default {
       min-width: 340px;
       max-width: 140px;
       text-shadow: 2px 2px $dark-50;
-      padding-left: 40px;
+      padding: 40px 0 0 40px;
     }
 
     &-subtitle {
@@ -242,6 +324,10 @@ export default {
         margin-top: 80px;
       }
 
+      &-subtitle {
+        line-height: 30px;
+      }
+
       &-video {
         max-height: calc(100vh - 134.5px);
         z-index: $last-layer;
@@ -256,7 +342,7 @@ export default {
     padding: 24px 24px 60px;
     // box-shadow: 0px 0px 20px 20px $white;
     z-index: $first-layer;
-    margin: 0 auto;
+    margin: 40px auto;
 
     .pres {
       &__rohil {
@@ -280,7 +366,8 @@ export default {
         padding: 15px 10px;
         text-align: center;
         font-size: 28px;
-        width: 1024px;
+        max-width: 1024px;
+        width: 95%;
       }
 
       &__description {
@@ -436,21 +523,38 @@ export default {
     align-items: center;
 
     .item__logo {
-      width: 240px;
+      width: 210px;
     }
 
     .item__redirect {
       color: $dark-900;
 
       img {
-        width: 90px;
+        width: 70px;
         margin-bottom: -10px;
       }
 
       &.whatsapp img {
-        width: 40px;
+        width: 30px;
         margin-bottom: 0;
         margin-left: 10px;
+      }
+    }
+
+
+    @media screen and (min-width: 450px) {
+      .item__logo {
+        width: 240px;
+      }
+
+      .item__redirect {
+        img {
+          width: 90px;
+        }
+
+        &.whatsapp img {
+          width: 40px;
+        }
       }
     }
 
@@ -464,10 +568,6 @@ export default {
       }
     }
   }
-}
-
-.header {
-  // box-shadow: 0px 0px 20px 20px $white;
 }
 
 .footer {

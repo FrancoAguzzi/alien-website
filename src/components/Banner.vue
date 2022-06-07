@@ -144,14 +144,14 @@ export default {
                 }
                 .icon {
                   margin-right: 0.5rem;
-                  background: url('../assets/img/icon-plus-white.svg') no-repeat center center;
+                  // background: url('../assets/img/icon-plus-white.svg') no-repeat center center;
                   width: 9px;
                   height: 9px;
                   transition: background-image 0.3s;
                 }
                 &:hover {
                   .icon {
-                    background: url('../assets/img/icon-plus-green.svg') no-repeat center center;
+                    // background: url('../assets/img/icon-plus-green.svg') no-repeat center center;
                   }
                 }
                 &:first-child {

@@ -30,14 +30,14 @@
                       id="fileInput"
                       @change="updateProfileImage($event.target.files[0])"
                     />
-                    <img src="@/assets/img/icon-upload.svg" alt="" />
+                    <!-- <img src="@/assets/img/icon-upload.svg" alt="" /> -->
                     <span>Alterar foto de perfil</span>
                   </div>
                 </div>
               </div>
               <div class="item-form">
                 <div class="title-form">
-                  <img src="@/assets/img/icon-persona.svg" alt="" />
+                  <!-- <img src="@/assets/img/icon-persona.svg" alt="" /> -->
                   <h4>Informações pessoais</h4>
                 </div>
                 <div class="form-double">
@@ -80,7 +80,7 @@
               </div>
               <div class="item-form">
                 <div class="title-form">
-                  <img src="@/assets/img/icon-pin.svg" alt="" />
+                  <!-- <img src="@/assets/img/icon-pin.svg" alt="" /> -->
                   <h4>Endereço</h4>
                 </div>
                 <div class="form-double">

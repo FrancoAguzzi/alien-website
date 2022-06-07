@@ -1,8 +1,8 @@
 <template>
   <section id="faq">
     <div class="container">
+        <!-- src="@/assets/img/faq/faq.svg" -->
       <img
-        src="@/assets/img/faq/faq.svg"
         rel="preload"
         class="title-image"
         alt="Perguntas frequentes"
@@ -12,15 +12,15 @@
       <h2>Perguntas <span>frequentes</span></h2>
       <nav v-if="!showLifetimeQuestions">
         <button type="button" :class="{ active: index === 0 }" @click="switchFaq(0)">
-          <img src="@/assets/img/faq/general.svg" rel="preload" :alt="tabTitles.tab1" />
+          <!-- <img src="@/assets/img/faq/general.svg" rel="preload" :alt="tabTitles.tab1" /> -->
           {{ tabTitles.tab1 }}
         </button>
         <button type="button" :class="{ active: index === 1 }" @click="switchFaq(1)">
-          <img src="@/assets/img/faq/mobile.svg" rel="preload" :alt="tabTitles.tab2" />
+          <!-- <img src="@/assets/img/faq/mobile.svg" rel="preload" :alt="tabTitles.tab2" /> -->
           {{ tabTitles.tab2 }}
         </button>
         <button type="button" :class="{ active: index === 2 }" @click="switchFaq(2)">
-          <img src="@/assets/img/faq/card.svg" rel="preload" :alt="tabTitles.tab3" />
+          <!-- <img src="@/assets/img/faq/card.svg" rel="preload" :alt="tabTitles.tab3" /> -->
           <span>{{ tabTitles.tab3 }}</span>
           <span>{{ tabTitles.tab3 }}</span>
         </button>

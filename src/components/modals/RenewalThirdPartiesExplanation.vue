@@ -1,7 +1,7 @@
 <template>
   <Modal v-if="modalData?.title" :class="{ 'show-modal': showModal }">
     <button @click="closeModal" class="close" type="button">
-      <img src="@/assets/img/close.svg" alt="" />
+      <!-- <img src="@/assets/img/close.svg" alt="" /> -->
     </button>
     <div class="rtpeModal">
       <div v-if="modalData?.iconName" class="icon rtpeModal__icon">

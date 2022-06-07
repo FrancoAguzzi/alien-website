@@ -127,7 +127,7 @@
                     type="button"
                     @click="showPassword = !showPassword"
                   >
-                    <img src="@/assets/img/eye.svg" alt="" />
+                    <!-- <img src="@/assets/img/eye.svg" alt="" /> -->
                   </button>
                 </div>
                 <small v-show="!validators.password"
@@ -148,7 +148,7 @@
                     type="button"
                     @click="showPasswordConfirm = !showPasswordConfirm"
                   >
-                    <img src="@/assets/img/eye.svg" alt="" />
+                    <!-- <img src="@/assets/img/eye.svg" alt="" /> -->
                   </button>
                 </div>
                 <small v-show="!validators.passwordConfirm">Senhas não coincidem</small>
@@ -378,7 +378,7 @@ export default {
 @import '../assets/scss/_inputs.scss';
 
 .bg-form {
-  background: url('../assets/img/bg-login.png') no-repeat right center;
+  // background: url('../assets/img/bg-login.png') no-repeat right center;
 }
 
 .s-forgot {

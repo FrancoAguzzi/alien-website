@@ -1,10 +1,10 @@
 <template>
   <Modal :class="['rrbModal', { 'show-modal': showModal }]">
     <button class="close js-close-modal" type="button" @click="closeModal">
-      <img src="@/assets/img/close.svg" alt="" />
+      <!-- <img src="@/assets/img/close.svg" alt="" /> -->
     </button>
     <div class="icon">
-      <img src="@/assets/img/mysignature/icon-sad-face.svg" alt="" />
+      <!-- <img src="@/assets/img/mysignature/icon-sad-face.svg" alt="" /> -->
     </div>
     <div class="rrbModal__texts">
       <h4 class="rrbModal__texts-title">

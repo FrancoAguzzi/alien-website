@@ -16,7 +16,7 @@
 
       <div class="msExpiration__infos-type">
         <div class="icon">
-          <img src="@/assets/img/icon-premium-filled.svg" alt="" />
+          <!-- <img src="@/assets/img/icon-premium-filled.svg" alt="" /> -->
         </div>
         <h6>Premium</h6>
       </div>

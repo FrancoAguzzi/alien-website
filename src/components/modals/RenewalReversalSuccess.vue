@@ -1,7 +1,7 @@
 <template>
   <Modal :class="['rrsModal', { 'show-modal': showModal }]">
     <div class="icon">
-      <img src="@/assets/img/mysignature/icon-reversal.svg" alt="" />
+      <!-- <img src="@/assets/img/mysignature/icon-reversal.svg" alt="" /> -->
     </div>
     <div class="rrsModal__texts">
       <h4 class="rrsModal__texts-title">A sua solicitação de estorno foi efetuada</h4>

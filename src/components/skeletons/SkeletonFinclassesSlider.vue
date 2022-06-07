@@ -1,5 +1,5 @@
 <template>
-  <img :src="require('@/assets/img/types/finclassUpdated.svg')" />
+  <!-- <img :src="require('@/assets/img/types/finclassUpdated.svg')" /> -->
   <div class="skeleton-cards">
     <SkeletonCardList />
   </div>

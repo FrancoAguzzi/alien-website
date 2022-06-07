@@ -5,7 +5,7 @@
         <div class="panel__close-title">
           <h3>{{ title }}</h3>
           <button type="button" @click="closePanel" class="close">
-            <img src="@/assets/img/close.svg" alt="" />
+            <!-- <img src="@/assets/img/close.svg" alt="" /> -->
           </button>
         </div>
       </div>

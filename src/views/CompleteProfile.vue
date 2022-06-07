@@ -2,10 +2,10 @@
   <div>
     <div class="pw__container">
       <div class="pw__img" :class="isRegisterFormActive ? 'register' : 'login'">
-        <img src="../assets/img/logo-color.svg" alt="Finclass - Logo" class="pw__form-img" />
+        <!-- <img src="../assets/img/logo-color.svg" alt="Finclass - Logo" class="pw__form-img" /> -->
       </div>
       <div class="pw__form">
-        <img src="../assets/img/logo-color.svg" alt="Finclass - Logo" class="pw__form-img" />
+        <!-- <img src="../assets/img/logo-color.svg" alt="Finclass - Logo" class="pw__form-img" /> -->
         <complete-profile-register
           v-if="isRegisterFormActive"
           :dummyUserToken="dummyUserToken"
@@ -119,13 +119,13 @@ export default {
       background-repeat: no-repeat !important;
 
       &.register {
-        background: linear-gradient(270deg, #000000 1.02%, rgba(0, 0, 0, 0) 37.63%),
-          url('../assets/img/partner-register-bkg.png');
+        // background: linear-gradient(270deg, #000000 1.02%, rgba(0, 0, 0, 0) 37.63%),
+        //   url('../assets/img/partner-register-bkg.png');
       }
 
       &.login {
-        background: linear-gradient(270deg, #000000 0%, rgba(0, 0, 0, 0) 32.97%),
-          url('../assets/img/partner-login-bkg.png');
+        // background: linear-gradient(270deg, #000000 0%, rgba(0, 0, 0, 0) 32.97%),
+          // url('../assets/img/partner-login-bkg.png');
       }
 
       > img {

@@ -60,7 +60,7 @@
         :class="{ 'error-input': registerFormError.hasOwnProperty('password') }"
       />
       <button class="js-btn-show-password" type="button">
-        <img src="@/assets/img/eye.svg" @click="togglePasswordShow" alt="Visualizar a senha" />
+        <!-- <img src="@/assets/img/eye.svg" @click="togglePasswordShow" alt="Visualizar a senha" /> -->
       </button>
     </div>
   </div>

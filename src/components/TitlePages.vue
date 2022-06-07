@@ -11,7 +11,7 @@
 
       <div v-else :class="['container', 'titlePages__content', { centered: category }]">
         <button v-if="backRouteName" @click="goBack" class="titlePages__content-back">
-          <img src="@/assets/img/arrow-back.svg" alt="Voltar para a página anterior" />
+          <!-- <img src="@/assets/img/arrow-back.svg" alt="Voltar para a página anterior" /> -->
         </button>
         <img v-else-if="!backRouteName && icon" :src="icon" class="titlePages__content-icon" />
 
@@ -64,7 +64,7 @@ export default {
 .titlePages {
   margin-top: 70px;
   padding: 40px 0px;
-  background: url('../assets/img/bg-title-page.png') no-repeat $dark-800 right center;
+  // background: url('../assets/img/bg-title-page.png') no-repeat $dark-800 right center;
 
   &__skeleton {
     display: flex;

@@ -1,10 +1,10 @@
 <template>
   <Modal :class="['rrcModal', { 'show-modal': showModal }]">
     <button class="close js-close-modal" type="button" @click="closeModal">
-      <img src="@/assets/img/close.svg" alt="" />
+      <!-- <img src="@/assets/img/close.svg" alt="" /> -->
     </button>
     <div class="icon">
-      <img src="@/assets/img/icon-cancel-credit.svg" alt="" />
+      <!-- <img src="@/assets/img/icon-cancel-credit.svg" alt="" /> -->
     </div>
     <div class="rrcModal__texts">
       <h4 class="rrcModal__texts-title">Você tem certeza que quer solicitar estorno?</h4>

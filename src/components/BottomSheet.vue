@@ -10,7 +10,7 @@
         <div class="c-bottom-sheet__container-title">
           <h3>{{ title }}</h3>
           <button class="close" type="button" @click="deactivate">
-            <img src="@/assets/img/close.svg" alt="" />
+            <!-- <img src="@/assets/img/close.svg" alt="" /> -->
           </button>
         </div>
         <div class="c-bottom-sheet__container-content">

@@ -2,7 +2,7 @@
   <div>
     <div class="los__container">
       <header class="los__header">
-        <img src="@/assets/img/logo-color.svg" alt="Finclass - Logo" class="los__header-logo" />
+        <!-- <img src="@/assets/img/logo-color.svg" alt="Finclass - Logo" class="los__header-logo" /> -->
       </header>
 
       <section class="los__steps">

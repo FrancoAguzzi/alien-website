@@ -11,7 +11,7 @@
         </div>
       </div>
       <button class="close js-close-alert" @click="closeModal">
-        <img src="@/assets/img/close-notification.svg" alt="" />
+        <!-- <img src="@/assets/img/close-notification.svg" alt="" /> -->
       </button>
     </div>
   </div>

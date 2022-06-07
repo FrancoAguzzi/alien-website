@@ -1,11 +1,15 @@
 <template>
+
   <div class="right-container">
+
     <slot></slot>
+
   </div>
+
 </template>
 
 <script>
-export default {};
+ export default {};
 </script>
 
 <style lang="scss">
@@ -17,7 +21,7 @@ export default {};
   margin-top: 5.5rem;
   padding-top: 4.5rem;
   padding-bottom: 7.625rem;
-  background: url('../assets/img/bg-profile.png') no-repeat top right;
+  // background: url('../assets/img/bg-profile.png') no-repeat top right;
   .container {
     display: grid;
     grid-template-columns: 300px 1fr;
@@ -42,7 +46,7 @@ export default {};
         .head {
           width: 100%;
           height: 174px;
-          background: url('../assets/img/bg-id.png') no-repeat $dark-900 center right;
+          // background: url('../assets/img/bg-id.png') no-repeat $dark-900 center right;
         }
         .info-geral {
           padding: 0px 70px 40px 70px;
@@ -554,3 +558,4 @@ export default {};
   }
 }
 </style>
+

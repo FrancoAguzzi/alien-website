@@ -7,6 +7,7 @@ const app = createApp(App);
 
 app.use(store);
 app.use(router);
+
 app.directive('click-outside', {
   beforeMount: (el, binding) => {
     el.clickOutsideEvent = (event) => {
@@ -20,4 +21,5 @@ app.directive('click-outside', {
     document.removeEventListener('click', el.clickOutsideEvent);
   },
 });
+
 app.mount('#app');

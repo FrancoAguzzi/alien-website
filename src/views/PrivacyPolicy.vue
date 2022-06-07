@@ -1,8 +1,8 @@
 <template>
   <div>
+      <!-- :icon="require('@/assets/img/icon-politica.svg')" -->
     <TitlePages
       :title="'Política de privacidade'"
-      :icon="require('@/assets/img/icon-politica.svg')"
       :subtitle="'Conheça mais detalhes da nossa política e condições de uso'"
     />
 
@@ -14,7 +14,7 @@
             <a @click="toggleMobileSection(1)" :class="{ active: index === 1 }">
               <div class="s-politica-wrapper_ellipse" :class="{ active: index === 1 }"></div>
               1. DEFINIÇÕES DOS TERMOS UTILIZADOS NESTE CONTRATO
-              <img src="@/assets/img/arrow-down-gray.svg" alt="Seta para baixo" />
+              <!-- <img src="@/assets/img/arrow-down-gray.svg" alt="Seta para baixo" /> -->
             </a>
             <div class="mobile-txt" :class="index === 1 ? 'show' : ''">
               <h3>Bem-vindo ao Finclass</h3>
@@ -115,7 +115,7 @@
             <a @click="toggleMobileSection(2)" :class="{ active: index === 2 }">
               <div class="s-politica-wrapper_ellipse" :class="{ active: index === 2 }"></div>
               2. ACEITAÇÃO DE TERMOS E POLÍTICAS
-              <img src="@/assets/img/arrow-down-gray.svg" alt="Seta para baixo" />
+              <!-- <img src="@/assets/img/arrow-down-gray.svg" alt="Seta para baixo" /> -->
             </a>
             <div class="mobile-txt" :class="index === 2 ? 'show' : ''">
               <h3>2. ACEITAÇÃO DE TERMOS E POLÍTICAS</h3>
@@ -143,7 +143,7 @@
             <a @click="toggleMobileSection(3)" :class="{ active: index === 3 }">
               <div class="s-politica-wrapper_ellipse" :class="{ active: index === 3 }"></div>
               3. USUÁRIOS DOS SERVIÇOS
-              <img src="@/assets/img/arrow-down-gray.svg" alt="Seta para baixo" />
+              <!-- <img src="@/assets/img/arrow-down-gray.svg" alt="Seta para baixo" /> -->
             </a>
             <div class="mobile-txt" :class="index === 3 ? 'show' : ''">
               <h3>3. USUÁRIOS DOS SERVIÇOS</h3>
@@ -164,7 +164,7 @@
             <a @click="toggleMobileSection(4)" :class="{ active: index === 4 }">
               <div class="s-politica-wrapper_ellipse" :class="{ active: index === 4 }"></div>
               4. CONTEÚDO
-              <img src="@/assets/img/arrow-down-gray.svg" alt="Seta para baixo" />
+              <!-- <img src="@/assets/img/arrow-down-gray.svg" alt="Seta para baixo" /> -->
             </a>
             <div class="mobile-txt" :class="index === 4 ? 'show' : ''">
               <h3>4. CONTEÚDO</h3>
@@ -180,7 +180,7 @@
             <a @click="toggleMobileSection(5)" :class="{ active: index === 5 }">
               <div class="s-politica-wrapper_ellipse" :class="{ active: index === 5 }"></div>
               5. TERMOS DE USO DO SERVIÇO
-              <img src="@/assets/img/arrow-down-gray.svg" alt="Seta para baixo" />
+              <!-- <img src="@/assets/img/arrow-down-gray.svg" alt="Seta para baixo" /> -->
             </a>
             <div class="mobile-txt" :class="index === 5 ? 'show' : ''">
               <h3>5. TERMOS DE USO DO SERVIÇO</h3>
@@ -342,7 +342,7 @@
             <a @click="toggleMobileSection(6)" :class="{ active: index === 6 }">
               <div class="s-politica-wrapper_ellipse" :class="{ active: index === 6 }"></div>
               6. PAGAMENTOS E CANCELAMENTOS
-              <img src="@/assets/img/arrow-down-gray.svg" alt="Seta para baixo" />
+              <!-- <img src="@/assets/img/arrow-down-gray.svg" alt="Seta para baixo" /> -->
             </a>
             <div class="mobile-txt" :class="index === 6 ? 'show' : ''">
               <h3>6. PAGAMENTOS E CANCELAMENTOS</h3>
@@ -422,7 +422,7 @@
             <a @click="toggleMobileSection(7)" :class="{ active: index === 7 }">
               <div class="s-politica-wrapper_ellipse" :class="{ active: index === 7 }"></div>
               7. CONCESSÕES E RESTRIÇÕES DA LICENÇA DE DIREITOS AUTORAIS E PROPRIEDADE INTELECTUAL
-              <img src="@/assets/img/arrow-down-gray.svg" alt="Seta para baixo" />
+              <!-- <img src="@/assets/img/arrow-down-gray.svg" alt="Seta para baixo" /> -->
             </a>
             <div class="mobile-txt" :class="index === 7 ? 'show' : ''">
               <h3>
@@ -531,7 +531,7 @@
             <a @click="toggleMobileSection(8)" :class="{ active: index === 8 }">
               <div class="s-politica-wrapper_ellipse" :class="{ active: index === 8 }"></div>
               8. POLITICA DE PRIVACIDADE E PROTEÇÃO AOS DADOS PESSOAIS
-              <img src="@/assets/img/arrow-down-gray.svg" alt="Seta para baixo" />
+              <!-- <img src="@/assets/img/arrow-down-gray.svg" alt="Seta para baixo" /> -->
             </a>
             <div class="mobile-txt" :class="index === 8 ? 'show' : ''">
               <h3>8. POLÍTICA DE PRIVACIDADE E PROTEÇÃO AOS DADOS PESSOAIS</h3>
@@ -777,7 +777,7 @@
             <a @click="toggleMobileSection(9)" :class="{ active: index === 9 }">
               <div class="s-politica-wrapper_ellipse" :class="{ active: index === 9 }"></div>
               9. SUSPENSÃO E RESCISÃO
-              <img src="@/assets/img/arrow-down-gray.svg" alt="Seta para baixo" />
+              <!-- <img src="@/assets/img/arrow-down-gray.svg" alt="Seta para baixo" /> -->
             </a>
             <div class="mobile-txt" :class="index === 9 ? 'show' : ''">
               <h3>9. SUSPENSÃO E RESCISÃO</h3>
@@ -795,7 +795,7 @@
             <a @click="toggleMobileSection(10)" :class="{ active: index === 10 }">
               <div class="s-politica-wrapper_ellipse" :class="{ active: index === 10 }"></div>
               10. LIMITAÇÃO DE RESPONSABILIDADE E INDENIZAÇÃO
-              <img src="@/assets/img/arrow-down-gray.svg" alt="Seta para baixo" />
+              <!-- <img src="@/assets/img/arrow-down-gray.svg" alt="Seta para baixo" /> -->
             </a>
             <div class="mobile-txt" :class="index === 10 ? 'show' : ''">
               <h3>10. LIMITAÇÃO DE RESPONSABILIDADE E INDENIZAÇÃO</h3>
@@ -829,7 +829,7 @@
             <a @click="toggleMobileSection(11)" :class="{ active: index === 11 }">
               <div class="s-politica-wrapper_ellipse" :class="{ active: index === 11 }"></div>
               11. DISPOSIÇÕES GERAIS
-              <img src="@/assets/img/arrow-down-gray.svg" alt="Seta para baixo" />
+              <!-- <img src="@/assets/img/arrow-down-gray.svg" alt="Seta para baixo" /> -->
             </a>
             <div class="mobile-txt" :class="index === 11 ? 'show' : ''">
               <h3>11. DISPOSIÇÕES GERAIS</h3>

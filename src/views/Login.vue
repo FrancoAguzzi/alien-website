@@ -2,7 +2,7 @@
   <div>
     <section class="s-login bg-form">
       <div class="container-form">
-        <img src="../assets/img/logo-color.svg" alt="" />
+        <!-- <img src="../assets/img/logo-color.svg" alt="" /> -->
         <div class="title-login">
           <h5>Acesse a maior plataforma de</h5>
           <h2>Educação financeira <br />do mundo!</h2>
@@ -32,15 +32,16 @@
                 id="login-password"
               />
               <button class="js-btn-show-password" type="button">
+                  <!-- src="@/assets/img/eye.svg" -->
                 <img
-                  src="@/assets/img/eye.svg"
                   @click="showPassword = !showPassword"
                   alt="Visualizar a senha"
                 />
               </button>
             </div>
             <button type="button" @click="navigateToRoute('forgot-password')" class="forgot">
-              Recuperar senha <img src="@/assets/img/clock.svg" alt="Recuperar senha" />
+              Recuperar senha 
+              <!-- <img src="@/assets/img/clock.svg" alt="Recuperar senha" /> -->
             </button>
           </div>
           <div class="form-group">
@@ -335,7 +336,7 @@ export default {
 }
 
 .bg-form {
-  background: url('../assets/img/bg-login.png') no-repeat right center;
+  // background: url('../assets/img/bg-login.png') no-repeat right center;
   @media (max-width: 1200px) {
     background-position-x: 50%;
   }

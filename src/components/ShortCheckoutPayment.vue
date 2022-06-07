@@ -53,13 +53,13 @@
       <label for="">
         CVV
         <div class="tooltip">
-          <img src="@/assets/img/icon-info.svg" />
+          <!-- <img src="@/assets/img/icon-info.svg" /> -->
           <div class="ballon">
             <p>
               CVV é um código de segurança de 3 dígitos, impresso no verso de cartões de crédito.
             </p>
             <div class="icon">
-              <img src="@/assets/img/icon-card.svg" alt="" />
+              <!-- <img src="@/assets/img/icon-card.svg" alt="" /> -->
             </div>
           </div>
         </div>
@@ -82,7 +82,7 @@
         <div>
           <span>{{ planBase.planDescription }}</span>
         </div>
-        <img src="@/assets/img/caret-select.svg" alt="" class="arrow" />
+        <!-- <img src="@/assets/img/caret-select.svg" alt="" class="arrow" /> -->
       </div>
       <div class="drop-select">
         <div class="wrap-content">

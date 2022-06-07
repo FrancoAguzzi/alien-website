@@ -1,12 +1,14 @@
 <template>
   <div class="left-container">
-    <h2><img src="@/assets/img/icon-perfil.svg" alt="" /> Meu perfil</h2>
+    <h2>
+      <!-- <img src="@/assets/img/icon-perfil.svg" alt="" />  -->
+      Meu perfil</h2>
     <div class="line"></div>
     <ul class="gtm-internal-menu">
       <li :class="currentPath === '/my-profile/profile' ? 'active' : ''">
         <router-link to="/my-profile/profile">
           <div class="icon">
-            <img src="@/assets/img/icon-profile.svg" alt="" />
+            <!-- <img src="@/assets/img/icon-profile.svg" alt="" /> -->
           </div>
           <span>Meu ID</span>
         </router-link>
@@ -14,7 +16,7 @@
       <li :class="currentPath === '/my-profile/personal-data' ? 'active' : ''">
         <router-link to="/my-profile/personal-data">
           <div class="icon">
-            <img src="@/assets/img/icon-dados-pessoais.svg" alt="" />
+            <!-- <img src="@/assets/img/icon-dados-pessoais.svg" alt="" /> -->
           </div>
           <span>Dados pessoais</span>
         </router-link>
@@ -22,7 +24,7 @@
       <li :class="currentPath === '/my-profile/my-signature' ? 'active' : ''">
         <router-link to="/my-profile/my-signature" id="menu-signature">
           <div class="icon">
-            <img src="@/assets/img/icon-assinatura.svg" alt="" />
+            <!-- <img src="@/assets/img/icon-assinatura.svg" alt="" /> -->
           </div>
           <span>
             Assinatura

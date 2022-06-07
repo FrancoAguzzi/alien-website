@@ -6,10 +6,10 @@
       </div>
     </div>
     <button class="btn-slide btn-prev" :class="`${prefix}-high-content-prev`">
-      <img src="@/assets/img/arrow-slide-white.svg" alt="" />
+      <!-- <img src="@/assets/img/arrow-slide-white.svg" alt="" /> -->
     </button>
     <button class="btn-slide btn-next" :class="`${prefix}-high-content-next`">
-      <img src="@/assets/img/arrow-slide-white.svg" alt="" />
+      <!-- <img src="@/assets/img/arrow-slide-white.svg" alt="" /> -->
     </button>
   </div>
 </template>

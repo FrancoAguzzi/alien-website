@@ -18,7 +18,7 @@
       </div>
 
       <button class="close js-close-modal" type="button" @click="toggleModal">
-        <img src="@/assets/img/close.svg" alt="Close icon" />
+        <!-- <img src="@/assets/img/close.svg" alt="Close icon" /> -->
       </button>
     </div>
 

@@ -321,10 +321,12 @@ export const utils = {
       };
 
       if (Object.keys(pathBy).includes(type)) {
-        return require('@/assets/img/types/' + pathBy[type.toLowerCase()]);
+        // return require('@/assets/img/types/' + pathBy[type.toLowerCase()]);
+        return ''
       }
-
-      return require('@/assets/img/types/' + pathBy['finclass']);
+      
+      // return require('@/assets/img/types/' + pathBy['finclass']);
+      return ''
     },
     buildCourseURL(courseGroup, courseID) {
       return courseGroup === 'FINCLASSES'
@@ -447,7 +449,8 @@ export const utils = {
       if (!brand) return null;
 
       try {
-        const icon = require('@/assets/img/card-flags/' + brand + '.svg');
+        // const icon = require('@/assets/img/card-flags/' + brand + '.svg');
+        const icon = ''
         return icon ?? null;
       } catch (error) {
         return null;

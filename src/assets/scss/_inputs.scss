@@ -65,8 +65,8 @@
     }
   }
   select {
-    background: url('../assets/img/caret-blue.svg') no-repeat rgba(32, 34, 39, 0.9) center right
-      20px;
+    // background: url('../assets/img/caret-blue.svg') no-repeat rgba(32, 34, 39, 0.9) center right
+      // 20px;
     border-radius: 6px;
     padding: 0px 20px;
     width: 100%;
@@ -465,7 +465,7 @@
     width: 0;
     &:checked ~ .checkmark {
       border: 1.5px solid #00e7f9;
-      background: url('../assets/img/checked-green.svg') no-repeat center top 4px;
+      // background: url('../assets/img/checked-green.svg') no-repeat center top 4px;
       &:after {
         display: block;
       }
@@ -500,7 +500,7 @@
     opacity: 0;
     cursor: pointer;
     &:checked ~ .checkmark {
-      background: url('../assets/img/check-radio.svg') no-repeat $dark-900 center center;
+      // background: url('../assets/img/check-radio.svg') no-repeat $dark-900 center center;
       border: 1px solid $dark-900;
     }
   }

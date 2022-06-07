@@ -12,7 +12,7 @@
         <div
           class="card"
           v-for="(card, index) in splitContent()"
-          :keys="index"
+          :key="index"
           :style="`width: calc(90% / ${gridAmount});`"
         >
           <div class="card-experts">
@@ -42,7 +42,7 @@
           @click="leftSlide()"
           :class="slide === 0 ? '' : 'show'"
         >
-          <img src="@/assets/img/arrow-right.svg" alt="" />
+          <!-- <img src="@/assets/img/arrow-right.svg" alt="" /> -->
         </button>
         <button
           :disabled="disabled"
@@ -50,7 +50,7 @@
           @click="rightSlide()"
           :class="slide === finContent.length - gridAmount ? '' : 'show'"
         >
-          <img src="@/assets/img/arrow-right.svg" alt="" />
+          <!-- <img src="@/assets/img/arrow-right.svg" alt="" /> -->
         </button>
       </div>
     </div>

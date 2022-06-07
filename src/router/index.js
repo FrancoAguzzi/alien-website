@@ -127,9 +127,9 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  if (!to.meta.public && !createStore.state.token) {
-    return next({ path: '/login' });
-  }
+  // if (!to.meta.public && !createStore.state.token) {
+  //   return next({ path: '/login' });
+  // }
   if (to.meta.public && createStore.state.token) {
     return next({ path: '/' });
   }

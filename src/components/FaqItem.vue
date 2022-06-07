@@ -3,8 +3,8 @@
     <div class="wrap-question" :class="{ active: isActive }">
       <strong>{{ question }}</strong>
       <div class="arrow-down" :class="{ active: isActive }">
-        <img v-if="isActive" src="../assets/img/faq/arrow-top.svg" alt="Arrow Up" />
-        <img v-else src="../assets/img/faq/arrow-down.svg" alt="Arrow Down" />
+        <!-- <img v-if="isActive" src="../assets/img/faq/arrow-top.svg" alt="Arrow Up" /> -->
+        <!-- <img v-else src="../assets/img/faq/arrow-down.svg" alt="Arrow Down" /> -->
       </div>
     </div>
     <div class="answer" :class="{ open: isActive }">

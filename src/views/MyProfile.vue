@@ -30,7 +30,7 @@
                           id="fileInput"
                           @change="updateProfileImage($event.target.files[0])"
                         />
-                        <img src="@/assets/img/icon-upload.svg" alt="" />
+                        <!-- <img src="@/assets/img/icon-upload.svg" alt="" /> -->
                         <span>Alterar foto de perfil</span>
                       </div>
                       <p>
@@ -42,11 +42,11 @@
                   <div class="right-container-user">
                     <ul>
                       <li>
-                        <img src="@/assets/img/icon-camera.svg" alt="" />
+                        <!-- <img src="@/assets/img/icon-camera.svg" alt="" /> -->
                         <span>{{ total.videos }} cursos</span>
                       </li>
                       <li>
-                        <img src="@/assets/img/icon-hours.svg" alt="" />
+                        <!-- <img src="@/assets/img/icon-hours.svg" alt="" /> -->
                         <span>{{ Math.ceil(total.hours / 3600000) }}h assistidas</span>
                       </li>
                     </ul>
@@ -55,7 +55,7 @@
                 <div class="conquistas">
                   <div class="title-conquistas">
                     <div class="icon">
-                      <img src="@/assets/img/icon-conquistas.svg" alt="" />
+                      <!-- <img src="@/assets/img/icon-conquistas.svg" alt="" /> -->
                     </div>
                     <h5>Conquistas</h5>
                   </div>
@@ -89,10 +89,10 @@
         :classes="'small'"
       >
         <button class="close js-close-modal" type="button" @click="badgeModal = !badgeModal">
-          <img src="@/assets/img/close.svg" alt="" />
+          <!-- <img src="@/assets/img/close.svg" alt="" /> -->
         </button>
         <div class="icon">
-          <img src="img/icon-contato.svg" alt="" />
+          <!-- <img src="img/icon-contato.svg" alt="" /> -->
         </div>
         <div class="content">
           <h3>Conquista</h3>

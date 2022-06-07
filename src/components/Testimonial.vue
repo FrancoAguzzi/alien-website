@@ -2,8 +2,8 @@
   <section id="testimonial">
     <div class="container">
       <div class="title">
+          <!-- src="@/assets/img/icon-testimonial.svg" -->
         <img
-          src="@/assets/img/icon-testimonial.svg"
           rel="preload"
           alt="Testimonial"
           height="32"
@@ -14,21 +14,21 @@
       <div class="testi-content">
         <div class="user">
           <div class="user-card" :class="{ active: index === 0 }">
-            <img src="@/assets/img/testimonial/testimonial1.webp" rel="preload" alt="Testimonial" />
+            <!-- <img src="@/assets/img/testimonial/testimonial1.webp" rel="preload" alt="Testimonial" /> -->
             <div class="wrap-text">
               <strong>Leticia Fagundes</strong>
               <p>Empreendedora - Curitiba</p>
             </div>
           </div>
           <div class="user-card" :class="{ active: index === 1 }">
-            <img src="@/assets/img/testimonial/testimonial2.webp" rel="preload" alt="Testimonial" />
+            <!-- <img src="@/assets/img/testimonial/testimonial2.webp" rel="preload" alt="Testimonial" /> -->
             <div class="wrap-text">
               <strong>Sara Rodrigues</strong>
               <p>Gestora de Processos - São Paulo</p>
             </div>
           </div>
           <div class="user-card" :class="{ active: index === 2 }">
-            <img src="@/assets/img/testimonial/testimonial3.webp" rel="preload" alt="Testimonial" />
+            <!-- <img src="@/assets/img/testimonial/testimonial3.webp" rel="preload" alt="Testimonial" /> -->
             <div class="wrap-text">
               <strong>Paulo Junqueira</strong>
               <p>Gestor de Processos - São Paulo</p>
@@ -37,10 +37,10 @@
         </div>
         <div class="control">
           <button type="button" class="up" @click="switchTestimonial(-1)">
-            <img src="@/assets/img/arrow-circle-down.svg" alt="Anterior" />
+            <!-- <img src="@/assets/img/arrow-circle-down.svg" alt="Anterior" /> -->
           </button>
           <button type="button" @click="switchTestimonial(+1)">
-            <img src="@/assets/img/arrow-circle-down.svg" alt="Próximo" />
+            <!-- <img src="@/assets/img/arrow-circle-down.svg" alt="Próximo" /> -->
           </button>
         </div>
         <div class="testi-text">
@@ -49,15 +49,15 @@
               <strong>A finclass mudou minha vida</strong>
               <ul>
                 <li>
+                  <!-- <img src="@/assets/img/testimonial/star.svg" rel="preload" alt="star" />
                   <img src="@/assets/img/testimonial/star.svg" rel="preload" alt="star" />
                   <img src="@/assets/img/testimonial/star.svg" rel="preload" alt="star" />
                   <img src="@/assets/img/testimonial/star.svg" rel="preload" alt="star" />
-                  <img src="@/assets/img/testimonial/star.svg" rel="preload" alt="star" />
-                  <img src="@/assets/img/testimonial/star.svg" rel="preload" alt="star" />
+                  <img src="@/assets/img/testimonial/star.svg" rel="preload" alt="star" /> -->
                 </li>
               </ul>
+                <!-- src="@/assets/img/testimonial/quote.svg" -->
               <img
-                src="@/assets/img/testimonial/quote.svg"
                 rel="preload"
                 class="quote"
                 alt="Quote"
@@ -76,15 +76,15 @@
               <strong>Os maiores mentores de finanças do mundo!</strong>
               <ul>
                 <li>
+                  <!-- <img src="@/assets/img/testimonial/star.svg" rel="preload" alt="star" />
                   <img src="@/assets/img/testimonial/star.svg" rel="preload" alt="star" />
                   <img src="@/assets/img/testimonial/star.svg" rel="preload" alt="star" />
                   <img src="@/assets/img/testimonial/star.svg" rel="preload" alt="star" />
-                  <img src="@/assets/img/testimonial/star.svg" rel="preload" alt="star" />
-                  <img src="@/assets/img/testimonial/star.svg" rel="preload" alt="star" />
+                  <img src="@/assets/img/testimonial/star.svg" rel="preload" alt="star" /> -->
                 </li>
               </ul>
+                <!-- src="@/assets/img/testimonial/quote.svg" -->
               <img
-                src="@/assets/img/testimonial/quote.svg"
                 rel="preload"
                 class="quote"
                 alt="Quote"
@@ -101,15 +101,15 @@
               <strong>Jeito leve de aprender finanças </strong>
               <ul>
                 <li>
+                  <!-- <img src="@/assets/img/testimonial/star.svg" rel="preload" alt="star" />
                   <img src="@/assets/img/testimonial/star.svg" rel="preload" alt="star" />
                   <img src="@/assets/img/testimonial/star.svg" rel="preload" alt="star" />
                   <img src="@/assets/img/testimonial/star.svg" rel="preload" alt="star" />
-                  <img src="@/assets/img/testimonial/star.svg" rel="preload" alt="star" />
-                  <img src="@/assets/img/testimonial/star.svg" rel="preload" alt="star" />
+                  <img src="@/assets/img/testimonial/star.svg" rel="preload" alt="star" /> -->
                 </li>
               </ul>
+                <!-- src="@/assets/img/testimonial/quote.svg" -->
               <img
-                src="@/assets/img/testimonial/quote.svg"
                 rel="preload"
                 class="quote"
                 alt="Quote"

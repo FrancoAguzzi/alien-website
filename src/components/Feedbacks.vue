@@ -1,11 +1,12 @@
 <template>
   <section class="main__feedbacks">
-    <h2 class="main__feedbacks-title">CLIENTES</h2>
-    <ul ref="slider" class="main__feedbacks-list">
+    <h2 class="main__feedbacks-title">CLIENTES QUE TIVERAM SUAS IDEIAS ETERNIZADAS POR MIM</h2>
+    <p class="main__feedbacks-subtitle">Veja como a <b style="color: #000">clareza</b> e o <b style="color: #000">entendimento</b>, fizeram com que eles tivessem <b style="color: #000">a tatuagem que sempre imaginaram</b>, mas que ainda não tinha sido mostrada a eles: </p>
+    <Flickity ref="flickity" :options="flickityOptions" class="main__feedbacks-list flickity">
       <li
-        v-for="({ tattoo, text, clientName, clientIg }, index) in feedbacks"
+        v-for="({ tattoo, clientIg, clientName, text }, index) in feedbacks"
         :key="index"
-        class="card"
+        class="card carousel-cell"
         :style="{ backgroundImage: `url(${tattoo})` }"
       >
         <div class="card__content">
@@ -17,20 +18,29 @@
         </div>
         <div class="shadow-hover"></div>
       </li>
-    </ul>
-    <div class="main__feedbacks-arrows">
-      <button @click="navigateTo(currentPage - 1)" class="arrow"></button>
-      <button @click="navigateTo(currentPage + 1)" class="arrow"></button>
-    </div>
+    </Flickity>
   </section>
 </template>
 
 <script>
+import Flickity from 'vue-flickity';
+
 export default {
   name: 'Feedbacks',
+  components: { Flickity },
   data() {
     return {
       currentPage: 0,
+      flickityOptions: {
+        initialIndex: 0,
+        prevNextButtons: true,
+        pageDots: true,
+        wrapAround: true,
+        fullscreen: true,
+        adaptiveHeight: true,
+        lazyLoad: true,
+        cellAlign: 'center'
+      },
       feedbacks: [
         {
           tattoo:
@@ -75,16 +85,6 @@ export default {
       ],
     };
   },
-  methods: {
-    navigateTo(slide) {
-      const slideWidth = 290 + 44;
-
-      if (slide) {
-        this.$refs.slider.scroll(slideWidth * slide, 0);
-        this.currentPage = slide;
-      }
-    },
-  },
 };
 </script>
 
@@ -99,34 +99,42 @@ export default {
   box-shadow: 0px 0px 20px 40px $white;
 
   &-title {
-    font-size: 32px;
+    font-size: 24px;
     color: $dark-900;
     text-align: center;
-    margin-bottom: 40px;
+    margin: 0 40px 40px;
+    line-height: 30px;
+  }
+
+  &-subtitle {
+    margin: 0 40px 40px;
+    color: $dark-300;
+    font-size: 20px;
+    text-align: center;
   }
 
   &-list {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    max-width: 1024px;
+    // display: flex;
+    // justify-content: flex-start;
+    max-width: 435px;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     user-select: none;
-    padding: 0;
-    // margin: 0 auto;
-    // padding-left: 50%;
-  }
+    margin: 0 auto;
 
-  &-arrows {
-    display: flex;
-    justify-content: space-between;
+    @media screen and (min-width: 1024px) {
+      max-width: 900px;
+    }
+
+    @media screen and (min-width: 1600px) {
+      max-width: 1200px;
+    }
   }
 }
 
 .card {
   display: inline-block;
-  // margin: 0 32px;
+  margin: 0 30px;
   position: relative;
   min-width: 435px;
   min-height: 630px;
@@ -135,21 +143,7 @@ export default {
   background-size: cover;
   background-position: left;
   background-repeat: no-repeat;
-  // border-radius: 6px;
   overflow-y: hidden;
-
-  // &.highlighted {
-  //   width: 340px;
-  //   height: 480px;
-  // }
-
-  &:first-child {
-    margin-left: unset;
-  }
-
-  &:last-child {
-    margin-right: unset;
-  }
 
   &:after {
     content: '';

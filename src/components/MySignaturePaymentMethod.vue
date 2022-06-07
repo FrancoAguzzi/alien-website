@@ -2,7 +2,7 @@
   <div class="msPaymentMethod">
     <div class="msPaymentMethod__title">
       <div class="icon">
-        <img src="@/assets/img/icon-credit-card-gray.svg" alt="" />
+        <!-- <img src="@/assets/img/icon-credit-card-gray.svg" alt="" /> -->
       </div>
 
       <div class="msPaymentMethod__title-description">

@@ -2,7 +2,7 @@
   <header class="header-page-forms" :class="header ? 'fixed-header' : ''">
     <div class="container">
       <button type="button" @click="navigate('/login')">
-        <img src="@/assets/img/logo-color.svg" alt="" class="logo" />
+        <!-- <img src="@/assets/img/logo-color.svg" alt="" class="logo" /> -->
       </button>
       <button type="button" @click="navigate('/login')" class="btn-white">Entrar</button>
     </div>

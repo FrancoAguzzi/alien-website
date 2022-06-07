@@ -10,8 +10,8 @@
       </h6>
     </div>
     <div class="icon">
+        <!-- src="@/assets/img/lifelong-logo.svg" -->
       <img
-        src="@/assets/img/lifelong-logo.svg"
         alt="Logo que identifica todos os usuários vitalícios da plataforma"
       />
     </div>

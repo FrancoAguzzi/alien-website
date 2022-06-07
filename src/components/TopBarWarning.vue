@@ -4,8 +4,8 @@
       <h6>{{ topBarWarningMessage }}</h6>
     </div>
     <button @click="closeTopBarWarning" class="topBarWarning__close">
+        <!-- src="@/assets/img/close.svg" -->
       <img
-        src="@/assets/img/close.svg"
         alt="Ícone simbolizando a ação de fechar o aviso que, ao ser clicado, remove a barra de notificação da página"
       />
     </button>

@@ -1,7 +1,7 @@
 <template>
+    <!-- :icon="require('@/assets/img/icon-favorites-star.svg')" -->
   <TitlePages
     :title="'Meus favoritos'"
-    :icon="require('@/assets/img/icon-favorites-star.svg')"
     :subtitle="''"
   />
   <section class="s-favoritos">
@@ -12,19 +12,20 @@
           <div>
             <span>Ordernar por:</span>
             <button class="js-select-filter">
-              <span>Mais recentes</span> <img src="img/arrow-down-outline.svg" alt="" />
+              <span>Mais recentes</span> 
+              <!-- <img src="img/arrow-down-outline.svg" alt="" /> -->
             </button>
           </div>
           <ul class="drop">
             <li>
               <a href="" class="js-opt-filter">
-                <img src="img/icon-alta.svg" alt="" />
+                <!-- <img src="img/icon-alta.svg" alt="" /> -->
                 <span>Em alta</span>
               </a>
             </li>
             <li>
               <a href="" class="js-opt-filter">
-                <img src="img/icon-recentes.svg" alt="" />
+                <!-- <img src="img/icon-recentes.svg" alt="" /> -->
                 <span>Mais recentes</span>
               </a>
             </li>
@@ -34,7 +35,7 @@
       <div class="all">
         <div class="card-docs" v-for="(card, index) in 6" :key="index">
           <div class="image">
-            <img src="@/assets/img/img-docs-01.jpg" alt="" />
+            <!-- <img src="@/assets/img/img-docs-01.jpg" alt="" /> -->
           </div>
           <div class="info">
             <h4>Influência da COVID no cenário macroeconômico brasileiro</h4>

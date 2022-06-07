@@ -1,10 +1,10 @@
 <template>
   <Modal :class="isOpen ? 'show-modal' : ''">
     <button class="close js-close-modal" type="button" @click="isOpen = false">
-      <img src="@/assets/img/close.svg" alt="" />
+      <!-- <img src="@/assets/img/close.svg" alt="" /> -->
     </button>
     <div class="meae__content">
-      <img src="@/assets/img/icon-email-warning.svg" alt="Alerta de e-mail" />
+      <!-- <img src="@/assets/img/icon-email-warning.svg" alt="Alerta de e-mail" /> -->
       <h4 class="meae__title">O e-mail inserido já existe</h4>
       <p class="meae__description">
         Já existe uma conta cadastrada com este e-mail. Basta efetuar o seu login para acessar a

@@ -15,7 +15,7 @@
             </h1>
             <div class="btns-mobile">
               <router-link :to="urlToRedirect(banner)" class="">
-                <img src="@/assets/img/icon-play.svg" alt="" />
+                <!-- <img src="@/assets/img/icon-play.svg" alt="" /> -->
                 assistir
               </router-link>
               <router-link
@@ -126,7 +126,7 @@ export default {
       content: '';
       width: 100%;
       height: 100%;
-      background: url('../assets/img/overlay-banner-hero.png') no-repeat center center;
+      // background: url('../assets/img/overlay-banner-hero.png') no-repeat center center;
       position: absolute;
       top: 0;
       left: 0;
@@ -185,14 +185,14 @@ export default {
             }
             .icon {
               margin-right: 0.5rem;
-              background: url('../assets/img/icon-plus-white.svg') no-repeat center center;
+              // background: url('../assets/img/icon-plus-white.svg') no-repeat center center;
               width: 9px;
               height: 9px;
               transition: background-image 0.3s;
             }
             &:hover {
               .icon {
-                background: url('../assets/img/icon-plus-green.svg') no-repeat center center;
+                // background: url('../assets/img/icon-plus-green.svg') no-repeat center center;
               }
             }
             &:first-child {

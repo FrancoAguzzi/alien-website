@@ -2,8 +2,8 @@
   <div @click="goBack" class="titleBack">
     <button class="titleBack__button">
       <div class="icon">
+          <!-- src="@/assets/img/arrow-back.svg" -->
         <img
-          src="@/assets/img/arrow-back.svg"
           alt="Seta apontando para esquerda como rótulo do botão que, ao ser pressionado, direciona o usuário para a tela anterior"
         />
       </div>

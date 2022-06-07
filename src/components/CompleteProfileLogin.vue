@@ -16,13 +16,14 @@
           placeholder="Insira 8 dígitos ou mais"
         />
         <button class="js-btn-show-password" type="button">
-          <img src="@/assets/img/eye.svg" @click="togglePasswordShow" alt="Visualizar a senha" />
+          <!-- <img src="@/assets/img/eye.svg" @click="togglePasswordShow" alt="Visualizar a senha" /> -->
         </button>
       </div>
     </div>
     <div class="form-group pl__form-forgot">
       <button type="button" @click="goToPasswordRecovery" class="pl__form-forgot--inner">
-        Recuperar senha <img src="@/assets/img/clock.svg" alt="Recuperar senha" />
+        Recuperar senha 
+        <!-- <img src="@/assets/img/clock.svg" alt="Recuperar senha" /> -->
       </button>
     </div>
     <div class="form-group">

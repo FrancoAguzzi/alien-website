@@ -1,7 +1,7 @@
 <template>
   <Modal :class="{ 'show-modal': isOpen }" id="js-modal-reportar-erro">
     <button @click="closeModal" type="button" class="close js-close-modal">
-      <img src="@/assets/img/close.svg" alt="Botão que permite fechar o modal de report de bug" />
+      <!-- <img src="@/assets/img/close.svg" alt="Botão que permite fechar o modal de report de bug" /> -->
     </button>
 
     <div class="icon">

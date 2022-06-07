@@ -4,11 +4,11 @@
       <ul class="nav">
         <li>
           <div class="logo">
-            <img src="@/assets/img/logo-color.svg" alt="Finclass Educação financeira" />
+            <!-- <img src="@/assets/img/logo-color.svg" alt="Finclass Educação financeira" /> -->
           </div>
           <div class="slogan-sep">
+              <!-- src="@/assets/img/extensive-footer/separator-foot.svg" -->
             <img
-              src="@/assets/img/extensive-footer/separator-foot.svg"
               rel="preload"
               class="sociais"
               alt="Instagram"
@@ -38,8 +38,8 @@
         <li>
           <strong>Redes sociais</strong>
           <a href="https://www.instagram.com/finclass_grupoprimo/" rel="noopener">
+              <!-- src="@/assets/img/extensive-footer/Vector_4.svg" -->
             <img
-              src="@/assets/img/extensive-footer/Vector_4.svg"
               rel="preload"
               class="sociais"
               alt="Instagram"
@@ -47,8 +47,8 @@
             Instagram
           </a>
           <a href="https://www.youtube.com/channel/UCeOEK9nZbdAw65WxPbXOZ0w" rel="noopener">
+              <!-- src="@/assets/img/extensive-footer/Vector_3.svg" -->
             <img
-              src="@/assets/img/extensive-footer/Vector_3.svg"
               rel="preload"
               class="sociais"
               alt="Youtube"
@@ -59,16 +59,16 @@
         <li class="stores">
           <strong>Baixe nosso app</strong>
           <a href="https://apps.apple.com/us/app/finclass/id1575280028" rel="noopener">
+              <!-- src="@/assets/img/extensive-footer/apple_footer.svg" -->
             <img
-              src="@/assets/img/extensive-footer/apple_footer.svg"
               rel="preload"
               class="str"
               alt="Apple Store"
             />
           </a>
           <a href="https://play.google.com/store/apps/details?id=com.finclass.app" rel="noopener">
+              <!-- src="@/assets/img/extensive-footer/google_footer.svg" -->
             <img
-              src="@/assets/img/extensive-footer/google_footer.svg"
               rel="preload"
               class="str"
               alt="Google Store"
@@ -81,7 +81,7 @@
         <p>2022 © Todos os direitos reservados. <strong>Finclass</strong></p>
         <p class="back" @click="backTop">
           Voltar para o topo
-          <img src="@/assets/img/arrow-circle-down.svg" alt="voltar ao topo" />
+          <!-- <img src="@/assets/img/arrow-circle-down.svg" alt="voltar ao topo" /> -->
         </p>
       </div>
     </div>
@@ -92,11 +92,11 @@
       <div class="back-top">
         <button class="back" @click="backTop">
           Voltar para o topo
-          <img src="@/assets/img/arrow-circle-down.svg" alt="voltar ao topo" />
+          <!-- <img src="@/assets/img/arrow-circle-down.svg" alt="voltar ao topo" /> -->
         </button>
       </div>
       <div class="logo">
-        <img src="@/assets/img/logo-color.svg" alt="Finclass Educação financeira" />
+        <!-- <img src="@/assets/img/logo-color.svg" alt="Finclass Educação financeira" /> -->
       </div>
       <div class="wrap-scroll">
         <div class="menu-content">
@@ -104,8 +104,8 @@
             <li class="footer-accordiion" @click="toggleAccordion('first')">
               <strong :class="{ open: isFirstOrderExpanded }">
                 Transparência
+                  <!-- src="@/assets/img/arrow-down-outline.svg" -->
                 <img
-                  src="@/assets/img/arrow-down-outline.svg"
                   rel="preload"
                   alt="Open close footer"
                 />
@@ -121,8 +121,8 @@
                   Proteja sua privacidade
                 </a>
               </div>
+                <!-- src="@/assets/img/extensive-footer/separador.svg" -->
               <img
-                src="@/assets/img/extensive-footer/separador.svg"
                 rel="preload"
                 alt="Google Store"
               />
@@ -130,8 +130,8 @@
             <li class="footer-accordiion" @click="toggleAccordion('second')">
               <strong :class="{ open: isSecondOrderExpanded }">
                 Fale conosco
+                  <!-- src="@/assets/img/arrow-down-outline.svg" -->
                 <img
-                  src="@/assets/img/arrow-down-outline.svg"
                   rel="preload"
                   alt="Open close footer"
                 />
@@ -139,8 +139,8 @@
               <div class="wrap-content" :class="{ open: isSecondOrderExpanded }">
                 <a href="mailto:suporte@finclass.com">Contato</a>
               </div>
+                <!-- src="@/assets/img/extensive-footer/separador.svg" -->
               <img
-                src="@/assets/img/extensive-footer/separador.svg"
                 rel="preload"
                 alt="Google Store"
               />
@@ -150,15 +150,15 @@
       </div>
       <div class="store-logo">
         <a href="https://apps.apple.com/us/app/finclass/id1575280028" rel="noopener">
+            <!-- src="@/assets/img/extensive-footer/apple_footer.svg" -->
           <img
-            src="@/assets/img/extensive-footer/apple_footer.svg"
             rel="preload"
             alt="Apple Store"
           />
         </a>
         <a href="https://play.google.com/store/apps/details?id=com.finclass.app" rel="noopener">
+            <!-- src="@/assets/img/extensive-footer/google_footer.svg" -->
           <img
-            src="@/assets/img/extensive-footer/google_footer.svg"
             rel="preload"
             alt="Google Store"
           />
@@ -166,16 +166,16 @@
       </div>
       <div class="sociais">
         <a href="https://www.instagram.com/finclass_grupoprimo/" rel="noopener">
+            <!-- src="@/assets/img/extensive-footer/Vector_4.svg" -->
           <img
-            src="@/assets/img/extensive-footer/Vector_4.svg"
             rel="preload"
             class="lazyload sociais"
             alt="Instagram"
           />
         </a>
         <a href="https://www.youtube.com/channel/UCeOEK9nZbdAw65WxPbXOZ0w" rel="noopener">
+            <!-- src="@/assets/img/extensive-footer/Vector_3.svg" -->
           <img
-            src="@/assets/img/extensive-footer/Vector_3.svg"
             rel="preload"
             class="lazyload sociais"
             alt="Youtube"

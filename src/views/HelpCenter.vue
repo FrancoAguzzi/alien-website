@@ -1,7 +1,7 @@
 <template>
   <div>
+      <!-- :icon="require('@/assets/img/central-ajuda.svg')" -->
     <TitlePages
-      :icon="require('@/assets/img/central-ajuda.svg')"
       title="Central de ajuda"
       subtitle="Precisando de ajuda? Entre em contato com nosso time de suporte ou veja nosso FAQ."
     />
@@ -21,14 +21,14 @@
                 class="faq-link"
               >
                 {{ splitFaqAddress(faqAddress, 'label') }}
-                <img src="@/assets/img/arrow-right.svg" alt="Saiba mais" />
+                <!-- <img src="@/assets/img/arrow-right.svg" alt="Saiba mais" /> -->
               </a>
             </li>
           </ul>
         </div>
         <div class="right-container">
           <button class="js-btn-modal-contato" type="button" @click="talkToUsOpen = !talkToUsOpen">
-            <img src="@/assets/img/icon-contato.svg" alt="" />
+            <!-- <img src="@/assets/img/icon-contato.svg" alt="" /> -->
             <span>Fale conosco</span>
           </button>
           <button
@@ -36,7 +36,7 @@
             @click="bugReportOpen = !bugReportOpen"
             class="js-btn-modal-reportar-erro"
           >
-            <img src="@/assets/img/icon-report.svg" alt="" />
+            <!-- <img src="@/assets/img/icon-report.svg" alt="" /> -->
             <span>Reportar um erro</span>
           </button>
         </div>
