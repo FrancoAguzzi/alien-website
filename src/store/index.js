@@ -1,5 +1,6 @@
 import http from '@/http';
 import finclub from './finclub';
+import captura from './captura';
 import { createStore } from 'vuex';
 import { utils as utilsMixins } from '@/mixins/utils';
 import createdPersistedState from 'vuex-persistedstate';
@@ -9,6 +10,7 @@ const baseURL = `https://api.finclass.com/${process.env.VUE_APP_STAGE}/`;
 export default createStore({
   modules: {
     finclub,
+    captura,
   },
   state: {
     token: null,

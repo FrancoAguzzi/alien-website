@@ -2,7 +2,7 @@
   <header class="header">
     <nav class="header__list">
       <li class="header__list-item">
-        <a class="item" href="/">
+        <a class="item" href="/captura">
           <img class="item__logo" src="@/assets/img/logo-preta-notext.png" alt="" />
         </a>
       </li>
@@ -24,8 +24,13 @@
     <!-- TEXTO DE CAPTURA -->
     <section class="main__first">
       <h1 class="main__first-title">Te mostro a tatuagem que está escondida em suas ideias!</h1>
-      <h2 class="main__first-subtitle">O que mais estou acostumado são clientes que chegam até mim, com <b style="color: #000">ideias e histórias incríveis</b> mas que não conseguem unir elas com <b style="color: #000">a arte da tatuagem</b> e é exatamente aí que eu entro.
-          Me apego aos <b style="color: #000">detalhes</b> desde a nossa conversa inicial até o final da nossa sessão, isso para que você conte ainda mais <b style="color: #000">quem você é</b> através de outra linguagem, <b style="color: #000">a linguagem da arte.</b>
+      <h2 class="main__first-subtitle">
+        O que mais estou acostumado são clientes que chegam até mim, com
+        <b style="color: #000">ideias e histórias incríveis</b> mas que não conseguem unir elas com
+        <b style="color: #000">a arte da tatuagem</b> e é exatamente aí que eu entro. Me apego aos
+        <b style="color: #000">detalhes</b> desde a nossa conversa inicial até o final da nossa
+        sessão, isso para que você conte ainda mais <b style="color: #000">quem você é</b> através
+        de outra linguagem, <b style="color: #000">a linguagem da arte.</b>
       </h2>
     </section>
 
@@ -34,9 +39,12 @@
       <div class="main__welcome-wrapper">
         <h1 class="main__welcome-title">SEJA BEM-VINDO <br />À EXPERIÊNCIA ALIEN</h1>
         <h2 class="main__welcome-subtitle">
-          <b style="color: #000">Minhas tatuagens começam muito antes do dia da sessão</b> de fato. 
-          Elas começam em nossa primeira conversa, onde busco <b style="color: #000">entender ao máximo você</b>, não apenas em suas ideias/histórias principais mas também em suas falas, expressões, ações e arquétipos.
-          Isso faz com que as tatuagens sejam <b style="color: #000">únicas e especiais para quem as carrega</b>, minha atenção e energia estão totalmente voltadas para você e para a arte.
+          <b style="color: #000">Minhas tatuagens começam muito antes do dia da sessão</b> de fato.
+          Elas começam em nossa primeira conversa, onde busco
+          <b style="color: #000">entender ao máximo você</b>, não apenas em suas ideias/histórias
+          principais mas também em suas falas, expressões, ações e arquétipos. Isso faz com que as
+          tatuagens sejam <b style="color: #000">únicas e especiais para quem as carrega</b>, minha
+          atenção e energia estão totalmente voltadas para você e para a arte.
         </h2>
         <button class="main__welcome-cta">SAIBA MAIS</button>
       </div>
@@ -59,15 +67,14 @@
       <div>
         <div class="pres__rohil"></div>
         <p class="pres__description">
-          Rohil é um artista venezuelano com aproximadamente <b>10 anos de experiência</b>, antes
-          de iniciar na tatuagem cursava psicologia e vendia seus quadros para pagar a faculdade.
-          Após alguns semestres resolveu largar o curso pois um amigo lhe apresentou o universo da
-          tattoo e ele viu uma possibilidade de
-          <b>unir a psicologia, espiritualidade e a arte!</b> Então ao longo de sua trajetória no
-          mundo da tattoo desenvolveu uma técnica de trabalho onde utiliza das
-          <b>geometrias, códigos, referência e história</b> e cria uma arte baseada na sua
-          personalidade! Além de ser um <b>trabalho único</b> e exclusivamente criado pra você, é
-          uma arte que agrega e se integra ao seu corpo,
+          Rohil é um artista venezuelano com aproximadamente <b>10 anos de experiência</b>, antes de
+          iniciar na tatuagem cursava psicologia e vendia seus quadros para pagar a faculdade. Após
+          alguns semestres resolveu largar o curso pois um amigo lhe apresentou o universo da tattoo
+          e ele viu uma possibilidade de <b>unir a psicologia, espiritualidade e a arte!</b> Então
+          ao longo de sua trajetória no mundo da tattoo desenvolveu uma técnica de trabalho onde
+          utiliza das <b>geometrias, códigos, referência e história</b> e cria uma arte baseada na
+          sua personalidade! Além de ser um <b>trabalho único</b> e exclusivamente criado pra você,
+          é uma arte que agrega e se integra ao seu corpo,
           <b>potencializando a pessoa que você é.</b>
         </p>
       </div>
@@ -215,7 +222,7 @@ export default {
       background-color: $dark-900;
     }
 
-    @media screen and (min-width: 450px) {  
+    @media screen and (min-width: 450px) {
       &-title {
         padding: 80px 40px 0;
       }
@@ -273,13 +280,13 @@ export default {
       min-width: 340px;
       max-width: 140px;
       text-shadow: 2px 2px $dark-50;
-      padding: 40px 0 0 40px;
+      padding: 0 0 0 40px;
     }
 
     &-subtitle {
       padding-left: 40px;
       color: $dark-300;
-      padding-right: 100px;
+      padding-right: 40px;
     }
 
     &-cta {
@@ -499,6 +506,7 @@ export default {
         font-size: 18px;
         padding: 15px 0 !important;
         text-align: center;
+        cursor: pointer;
       }
     }
 
@@ -540,7 +548,6 @@ export default {
         margin-left: 10px;
       }
     }
-
 
     @media screen and (min-width: 450px) {
       .item__logo {
