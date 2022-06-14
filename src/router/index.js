@@ -3,7 +3,8 @@ import createStore from '@/store';
 
 const routes = [
   {
-    path: '/captura',
+    path: '/',
+    alias: '/captura',
     name: 'Captura',
     component: () => import(/* webpackChunkName: "Captura" */ '../views/Captura.vue'),
   },
@@ -24,12 +25,6 @@ const routes = [
     path: '/:catchAll(.*)',
     name: 'NotFound',
     component: () => import(/* webpackChunkName: "home" */ '../views/PageNotFound.vue'),
-  },
-  {
-    path: '/',
-    name: 'Home',
-    component: () => import(/* webpackChunkName: "home" */ '../views/Home.vue'),
-    props: true,
   },
   // {
   //   path: '/shop',

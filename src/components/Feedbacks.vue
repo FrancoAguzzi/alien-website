@@ -1,7 +1,6 @@
 <template>
   <section class="main__feedbacks">
-    <h2 class="main__feedbacks-title">CLIENTES QUE TIVERAM SUAS IDEIAS ETERNIZADAS POR MIM</h2>
-    <p class="main__feedbacks-subtitle">Veja como a <b style="color: #000">clareza</b> e o <b style="color: #000">entendimento</b>, fizeram com que eles tivessem <b style="color: #000">a tatuagem que sempre imaginaram</b>, mas que ainda não tinha sido mostrada a eles: </p>
+    <h2 class="main__feedbacks-title">CLIENTES QUE TIVERAM SUAS IDEIAS ETERNIZADAS POR MIM:</h2>
     <Flickity ref="flickity" :options="flickityOptions" class="main__feedbacks-list flickity">
       <li
         v-for="({ tattoo, clientIg, clientName, text }, index) in feedbacks"
@@ -19,6 +18,11 @@
         <div class="shadow-hover"></div>
       </li>
     </Flickity>
+    <p class="main__feedbacks-subtitle">
+      Veja como a <b style="color: #000">clareza</b> e o <b style="color: #000">entendimento</b>,
+      fizeram com que eles tivessem <b style="color: #000">a tatuagem que sempre imaginaram</b>, mas
+      que ainda não havia sido mostrada a eles...
+    </p>
   </section>
 </template>
 
@@ -39,7 +43,7 @@ export default {
         fullscreen: true,
         adaptiveHeight: true,
         lazyLoad: true,
-        cellAlign: 'center'
+        cellAlign: 'center',
       },
       feedbacks: [
         {
@@ -92,35 +96,72 @@ export default {
 @import '@/assets/scss/variables.scss';
 
 .main__feedbacks {
-  padding: 60px 0 80px;
+  padding: 80px 0 60px;
   background-color: $white;
   max-width: 100vw;
   overflow: hidden;
   box-shadow: 0px 0px 20px 40px $white;
 
   &-title {
-    font-size: 24px;
+    font-size: 1.375rem;
     color: $dark-900;
     text-align: center;
     margin: 0 40px 40px;
     line-height: 30px;
+    position: relative;
+    background-color: $white;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      height: 4px;
+      width: 1000vw;
+      left: 100%;
+      top: 50%;
+      background-color: $dark-900;
+    }
+
+    &:after {
+      left: unset;
+      right: 100%;
+    }
+
+    @media screen and (min-width: 425px) {
+      max-width: 400px;
+      font-size: 1.5rem;
+      margin: 0 auto 40px;
+    }
   }
 
   &-subtitle {
-    margin: 0 40px 40px;
+    margin: 100px auto 0;
+    padding: 0 20px;
     color: $dark-300;
-    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 130%;
     text-align: center;
+    font-style: italic;
+
+    @media screen and (min-width: 425px) {
+      max-width: 600px;
+    }
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.5rem;
+    }
   }
 
   &-list {
-    // display: flex;
-    // justify-content: flex-start;
-    max-width: 435px;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     user-select: none;
     margin: 0 auto;
+    max-width: 100vw;
+
+    @media screen and (min-width: 435px) {
+      max-width: 435px;
+    }
 
     @media screen and (min-width: 1024px) {
       max-width: 900px;
@@ -136,7 +177,7 @@ export default {
   display: inline-block;
   margin: 0 30px;
   position: relative;
-  min-width: 435px;
+  min-width: 375px;
   min-height: 630px;
   cursor: pointer;
   transition: all 0.3s;
@@ -145,14 +186,20 @@ export default {
   background-repeat: no-repeat;
   overflow-y: hidden;
 
-  &:after {
-    content: '';
-    width: 8px;
-    height: 8px;
-    background-color: $white;
-    position: absolute;
-    right: -36px;
-    top: calc(50% - 4px);
+  &:first-child {
+    &:before {
+      content: 'Clique para ler o depoimento 👽';
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      color: $white;
+      font-family: 'Proxima Nova Light';
+      font-size: 0.875rem;
+
+      @media screen and (min-width: 1024px) {
+        content: '';
+      }
+    }
   }
 
   &__content {

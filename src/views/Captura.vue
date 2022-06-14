@@ -54,7 +54,7 @@
         autoplay
         loop
         muted
-        :poster="videoPosterPhoto"
+        :poster="getVideoPoster"
       >
         <source :src="getVideoSrc" type="video/mp4" />
       </video>
@@ -67,8 +67,8 @@
       <div>
         <div class="pres__rohil"></div>
         <p class="pres__description">
-          Rohil é um artista venezuelano com aproximadamente <b>10 anos de experiência</b>, antes de
-          iniciar na tatuagem cursava psicologia e vendia seus quadros para pagar a faculdade. Após
+          Rohil é um artista venezuelano com aproximadamente <b>10 anos de experiência</b>. Antes de
+          iniciar na tatuagem cursava psicologia e vendia seus quadros para pagar a faculdade, após
           alguns semestres resolveu largar o curso pois um amigo lhe apresentou o universo da tattoo
           e ele viu uma possibilidade de <b>unir a psicologia, espiritualidade e a arte!</b> Então
           ao longo de sua trajetória no mundo da tattoo desenvolveu uma técnica de trabalho onde
@@ -81,8 +81,7 @@
     </section>
 
     <section class="main__poster">
-      <div class="image"></div>
-      <div class="box"></div>
+      <div class="main__poster-image"></div>
     </section>
 
     <Feedbacks />
@@ -137,8 +136,6 @@ export default {
       isMobile: false,
       name: '',
       message: '',
-      videoPosterPhoto:
-        'https://res.cloudinary.com/dwtl1a1x2/image/upload/v1652733073/alien%20photos/_RNJ6988_mhrir3.jpg',
       videoSrc: {
         mobile:
           'https://res.cloudinary.com/dwtl1a1x2/video/upload/v1652733447/alien%20videos/FinalVideo_1644942823.756507_ximkun.mp4',
@@ -154,6 +151,11 @@ export default {
   computed: {
     getVideoSrc() {
       return this.isMobile ? this.videoSrc.mobile : this.videoSrc.desktop;
+    },
+    getVideoPoster() {
+      return window.navigator.onLine
+        ? 'https://res.cloudinary.com/dwtl1a1x2/image/upload/v1652733073/alien%20photos/_RNJ6988_mhrir3.jpg'
+        : require('@/assets/img/alien-buda.jpg');
     },
   },
   methods: {
@@ -280,11 +282,11 @@ export default {
       min-width: 340px;
       max-width: 140px;
       text-shadow: 2px 2px $dark-50;
-      padding: 0 0 0 40px;
+      margin: 26px 20px;
     }
 
     &-subtitle {
-      padding-left: 40px;
+      padding-left: 20px;
       color: $dark-300;
       padding-right: 40px;
     }
@@ -294,7 +296,7 @@ export default {
       border: 4px solid $dark-900;
       background: transparent;
       font-family: 'Proxima Nova Bold';
-      margin: 20px 40px 0 50px;
+      margin: 20px 40px 0 30px;
       font-size: 22px;
       position: relative;
 
@@ -317,6 +319,20 @@ export default {
         height: 50px;
         background-color: $dark-900;
         transform: rotateZ(0deg);
+      }
+    }
+
+    @media screen and (min-width: 425px) {
+      &-title {
+        margin: 26px 40px;
+      }
+
+      &-subtitle {
+        padding-left: 40px;
+      }
+
+      &-cta {
+        margin-left: 50px;
       }
     }
 
@@ -347,7 +363,6 @@ export default {
     flex-direction: column;
     align-items: center;
     padding: 24px 24px 60px;
-    // box-shadow: 0px 0px 20px 20px $white;
     z-index: $first-layer;
     margin: 40px auto;
 
@@ -357,12 +372,16 @@ export default {
         height: 220px;
         border-radius: 50%;
         align-self: flex-end;
-        float: right;
-        margin: 0 0 10px 30px;
+        margin: 0 auto 10px;
         background: url('../assets/img/rohil.png');
         background-size: cover;
         shape-outside: circle(50%);
         box-shadow: inset 0px 0px 20px 20px $white;
+
+        @media screen and (min-width: 425px) {
+          margin: 0 0 10px 30px;
+          float: right;
+        }
       }
 
       &__title {
@@ -379,8 +398,8 @@ export default {
 
       &__description {
         color: $dark-300;
-        font-size: 1.25rem;
-        line-height: 120%;
+        font-size: 1.2rem;
+        line-height: 130%;
         max-width: 1024px;
 
         b {
@@ -397,13 +416,11 @@ export default {
   }
 
   &__poster {
-    width: 100vw;
     max-width: 100vw;
-    overflow: hidden;
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
 
-    .image {
+    &-image {
       background: url('../assets/img/tatuando.jpeg');
       background-size: cover;
       background-position: center;
@@ -412,22 +429,6 @@ export default {
       margin: 0 -5%;
       box-shadow: inset 0 0 20px 20px $white;
       z-index: $last-layer;
-      position: relative;
-    }
-
-    .box {
-      background: url('../assets/img/tatuando.jpeg');
-      background-size: cover;
-      background-position: center;
-      width: 110%;
-      height: 550px;
-      clip-path: polygon(0 10%, 100% 10%, 100% 90%, 0 90%);
-      margin-left: -5vw;
-      margin-right: -5vw;
-      z-index: $second-layer;
-      position: absolute;
-      left: 0;
-      top: 0;
     }
   }
 
