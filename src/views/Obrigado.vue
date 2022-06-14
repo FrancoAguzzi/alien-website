@@ -1,6 +1,6 @@
 <template>
   <main class="typ">
-    <img src="@/assets/img/nave.jpeg" alt="Ícone de nave espacial" class="typ__ship" />
+    <img src="@/assets/img/nave.webp" alt="Ícone de nave espacial" class="typ__ship" />
     <h1 class="typ__title">ESTABELECENDO CONTATO{{ dots }}</h1>
   </main>
 </template>

@@ -155,7 +155,7 @@ export default {
     getVideoPoster() {
       return window.navigator.onLine
         ? 'https://res.cloudinary.com/dwtl1a1x2/image/upload/v1652733073/alien%20photos/_RNJ6988_mhrir3.jpg'
-        : require('@/assets/img/alien-buda.jpg');
+        : require('@/assets/img/alien-buda.webp');
     },
   },
   methods: {
@@ -421,7 +421,7 @@ export default {
     overflow: hidden;
 
     &-image {
-      background: url('../assets/img/tatuando.jpeg');
+      background: url('../assets/img/tatuando.webp');
       background-size: cover;
       background-position: center;
       height: 550px;
