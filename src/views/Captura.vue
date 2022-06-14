@@ -373,7 +373,7 @@ export default {
         border-radius: 50%;
         align-self: flex-end;
         margin: 0 auto 10px;
-        background: url('../assets/img/rohil.png');
+        background: url('../assets/img/rohil.webp');
         background-size: cover;
         shape-outside: circle(50%);
         box-shadow: inset 0px 0px 20px 20px $white;
