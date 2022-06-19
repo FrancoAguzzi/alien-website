@@ -35,7 +35,7 @@
     </section>
 
     <!-- TEXTO + VIDEO -->
-    <section class="main__welcome">
+    <!-- <section class="main__welcome">
       <div class="main__welcome-wrapper">
         <h1 class="main__welcome-title">SEJA BEM-VINDO <br />À EXPERIÊNCIA ALIEN</h1>
         <h2 class="main__welcome-subtitle">
@@ -59,7 +59,7 @@
         <source :src="getVideoSrc" type="video/mp4" />
       </video>
       <div class="main__welcome-shadow"></div>
-    </section>
+    </section> -->
 
     <!-- ROHIL + CONTATO -->
     <section class="main__presentation">
@@ -202,27 +202,27 @@ export default {
       line-height: 28px;
     }
 
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 8px;
-      height: 4px;
-      width: 40vw;
-      max-width: 250px;
-      background-color: $dark-900;
-    }
+    // &:before {
+    //   content: '';
+    //   position: absolute;
+    //   left: 0;
+    //   bottom: 8px;
+    //   height: 4px;
+    //   width: 40vw;
+    //   max-width: 250px;
+    //   background-color: $dark-900;
+    // }
 
-    &:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      height: 4px;
-      width: 50vw;
-      max-width: 300px;
-      background-color: $dark-900;
-    }
+    // &:after {
+    //   content: '';
+    //   position: absolute;
+    //   left: 0;
+    //   bottom: 0;
+    //   height: 4px;
+    //   width: 50vw;
+    //   max-width: 300px;
+    //   background-color: $dark-900;
+    // }
 
     @media screen and (min-width: 450px) {
       &-title {
@@ -374,7 +374,8 @@ export default {
         align-self: flex-end;
         margin: 0 auto 10px;
         background: url('../assets/img/rohil.webp');
-        background-size: cover;
+        background-size: 120% 120%;
+        background-position: -20px 50%;
         shape-outside: circle(50%);
         box-shadow: inset 0px 0px 20px 20px $white;
 

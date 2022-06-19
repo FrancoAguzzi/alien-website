@@ -1,23 +1,31 @@
 <template>
   <section class="main__feedbacks">
     <h2 class="main__feedbacks-title">CLIENTES QUE TIVERAM SUAS IDEIAS ETERNIZADAS POR MIM:</h2>
-    <Flickity ref="flickity" :options="flickityOptions" class="main__feedbacks-list flickity">
-      <li
+
+    <!-- Carousel -->
+    <Flickity ref="flickity" :options="flickityOptions" class="main__feedbacks-carousel flickity">
+      <FeedbacksCard
         v-for="({ tattoo, clientIg, clientName, text }, index) in feedbacks"
         :key="index"
-        class="card carousel-cell"
-        :style="{ backgroundImage: `url(${tattoo})` }"
-      >
-        <div class="card__content">
-          <a class="card__content-clientIg" :href="clientIg.link">{{ clientIg.label }}</a>
-          <p class="card__content-clientName">{{ clientName }}</p>
-          <div class="card__content-text">
-            <p>{{ text }}</p>
-          </div>
-        </div>
-        <div class="shadow-hover"></div>
-      </li>
+        :tattoo="tattoo"
+        :clientIg="clientIg"
+        :clientName="clientName"
+        :text="text"
+      ></FeedbacksCard>
     </Flickity>
+
+    <!-- Grid -->
+    <div class="main__feedbacks-list">
+      <FeedbacksCard
+        v-for="({ tattoo, clientIg, clientName, text }, index) in feedbacks"
+        :key="index"
+        :tattoo="tattoo"
+        :clientIg="clientIg"
+        :clientName="clientName"
+        :text="text"
+      ></FeedbacksCard>
+    </div>
+
     <p class="main__feedbacks-subtitle">
       Veja como a <b style="color: #000">clareza</b> e o <b style="color: #000">entendimento</b>,
       fizeram com que eles tivessem <b style="color: #000">a tatuagem que sempre imaginaram</b>, mas
@@ -28,18 +36,19 @@
 
 <script>
 import Flickity from 'vue-flickity';
+import FeedbacksCard from './FeedbacksCard.vue';
 
 export default {
   name: 'Feedbacks',
-  components: { Flickity },
+  components: { Flickity, FeedbacksCard },
   data() {
     return {
       currentPage: 0,
       flickityOptions: {
-        initialIndex: 0,
+        initialIndex: 1,
         prevNextButtons: true,
         pageDots: true,
-        wrapAround: true,
+        wrapAround: false,
         fullscreen: true,
         adaptiveHeight: true,
         lazyLoad: true,
@@ -49,41 +58,31 @@ export default {
         {
           tattoo:
             'https://res.cloudinary.com/dwtl1a1x2/image/upload/v1652815051/alien%20photos/IMG_9768_m6wnum.jpg',
-          text: 'Foi foda cara! Bom pra cacete, tava deitadão de boa e do nada zuuuuuuuuuum uma nave me abduziu pra um outro planeta. Olhei ao redor e vi vários homens carecas com tatuagem até o pescoço saudando um ser que chamavam de Pic.',
-          clientName: 'João Kuerten',
+          text: 'Cara essa foi minha primeira tattoo. Foi uma experiência transformadora, eu tinha uma ideia de arte que o Rohil foi muito além e colocou todos os sentimentos que queria demonstrar nessa tatto! Futuramente já quero fazer o fechamento do braço e continuar essa história!',
+          clientName: 'Danilo Fonte',
           clientIg: {
             link: '',
-            label: '@joao.kuerten',
+            label: '@danilo.s.fonte',
           },
         },
         {
           tattoo:
             'https://res.cloudinary.com/dwtl1a1x2/image/upload/v1652815051/alien%20photos/IMG_9764_bej7xl.jpg',
-          text: 'Foi foda cara! Bom pra cacete, tava deitadão de boa e do nada zuuuuuuuuuum uma nave me abduziu pra um outro planeta. Olhei ao redor e vi vários homens carecas com tatuagem até o pescoço saudando um ser que chamavam de Pic.',
-          clientName: 'Rohil Guerreiro',
+          text: 'Obrigado @rohilart e equipe Studio Alien, pela dedicação e conexão neste trabalho, que sem dúvidas, não é uma simples tatuagem!!! 🙏😍',
+          clientName: 'Gustavo Ab',
           clientIg: {
             link: '',
-            label: '@rohilart',
-          },
-        },
-        {
-          tattoo:
-            'https://res.cloudinary.com/dwtl1a1x2/image/upload/v1652815051/alien%20photos/IMG_9766_jj5rhv.jpg',
-          text: 'Foi foda cara! Bom pra cacete, tava deitadão de boa e do nada zuuuuuuuuuum uma nave me abduziu pra um outro planeta. Olhei ao redor e vi vários homens carecas com tatuagem até o pescoço saudando um ser que chamavam de Pic.',
-          clientName: 'Franco Aguzzi',
-          clientIg: {
-            link: '',
-            label: '@franco.aguzzi',
+            label: '@gustavobrk',
           },
         },
         {
           tattoo:
             'https://res.cloudinary.com/dwtl1a1x2/image/upload/v1652815051/alien%20photos/IMG_9763_ld1uyk.jpg',
-          text: 'Foi foda cara! Bom pra cacete, tava deitadão de boa e do nada zuuuuuuuuuum uma nave me abduziu pra um outro planeta. Olhei ao redor e vi vários homens carecas com tatuagem até o pescoço saudando um ser que chamavam de Pic.',
-          clientName: 'Lucas Schimidt',
+          text: 'Tattoo foda do mestre @rohilart que com poucos infos conseguiu pegar a essência do que eu queria + a arte dele, chegando neste trampo sensacional, complexo e repleto de significado. Abraço e assim que possível colando ai pra fazer o outro braço! Valeu!',
+          clientName: 'Guilherme Franco',
           clientIg: {
             link: '',
-            label: '@lucas.schimidt',
+            label: '@guilhefranco',
           },
         },
       ],
@@ -152,7 +151,7 @@ export default {
     }
   }
 
-  &-list {
+  &-carousel {
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     user-select: none;
@@ -167,127 +166,22 @@ export default {
       max-width: 900px;
     }
 
-    @media screen and (min-width: 1600px) {
-      max-width: 1200px;
-    }
-  }
-}
-
-.card {
-  display: inline-block;
-  margin: 0 30px;
-  position: relative;
-  min-width: 375px;
-  min-height: 630px;
-  cursor: pointer;
-  transition: all 0.3s;
-  background-size: cover;
-  background-position: left;
-  background-repeat: no-repeat;
-  overflow-y: hidden;
-
-  &:first-child {
-    &:before {
-      content: 'Clique para ler o depoimento 👽';
-      position: absolute;
-      left: 10px;
-      top: 10px;
-      color: $white;
-      font-family: 'Proxima Nova Light';
-      font-size: 0.875rem;
-
-      @media screen and (min-width: 1024px) {
-        content: '';
-      }
+    @media screen and (min-width: 1216px) {
+      display: none;
     }
   }
 
-  &__content {
-    max-width: 100%;
-    padding: 32px 16px 14px;
-    position: absolute;
-    z-index: 20;
-    bottom: -125px;
-    background-image: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.8) 20%);
-    transition: all 0.3s;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  &-list {
+    display: none;
 
-    &-clientIg {
-      letter-spacing: -0.005em;
-      color: $dark-900;
-      opacity: 0.7;
-      transition: opacity 0.3s;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      max-width: 100%;
-      font: 600 20px/145% 'Proxima Nova Bold';
-      margin: 0 0 10px;
-    }
+    @media screen and (min-width: 1216px) {
+      display: grid;
+      justify-content: center;
+      grid-template-columns: repeat(auto-fit, 375px);
+      grid-gap: 30px;
 
-    &-clientName {
-      display: block;
-      font: 600 14px/145% 'Proxima Nova Semibold';
-      letter-spacing: -0.005em;
-      color: $dark-900;
-      display: block;
-      margin: 0 0 4px;
-    }
-
-    &-text {
-      font-size: 1.125rem;
-      line-height: 145%;
-      letter-spacing: -0.005em;
-      color: $dark-900;
-      opacity: 0.7;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      word-wrap: break-word;
-      min-height: 60px;
-      max-height: 60px;
-      margin-top: 20px;
-      font-family: 'Proxima Nova Regular';
-      text-align: right;
-
-      &:before {
-        content: '';
-        position: absolute;
-        height: 2px;
-        background-color: $dark-900;
-        width: 275px;
-        top: 103px;
-        right: 0;
-      }
-    }
-  }
-
-  .shadow-hover {
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(180deg, transparent, #ffffff80);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 0%;
-    z-index: 1;
-    transition: all 0.3s;
-  }
-
-  &:hover {
-    .shadow-hover {
-      height: 100%;
-      display: block;
-    }
-
-    .card__content {
-      bottom: 0;
-      transition: all 0.3s;
-
-      &-text {
-        opacity: 1;
-        max-height: unset;
+      .card {
+        margin: 0;
       }
     }
   }
