@@ -68,7 +68,7 @@ export default {
         {
           tattoo:
             'https://res.cloudinary.com/dwtl1a1x2/image/upload/v1652815051/alien%20photos/IMG_9764_bej7xl.jpg',
-          text: 'Obrigado @rohilart e equipe Studio Alien, pela dedicação e conexão neste trabalho, que sem dúvidas, não é uma simples tatuagem!!! 🙏😍',
+          text: 'Obrigado @rohilart e equipe Studio Alien, pela dedicação e conexão neste trabalho, que sem dúvidas, não é uma simples tatuagem!!!',
           clientName: 'Gustavo Ab',
           clientIg: {
             link: '',

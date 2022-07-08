@@ -7,17 +7,8 @@
 </template>
 
 <script>
-import { logoutUserMix } from '@/mixins';
-import { utils } from '@/mixins/utils.js';
-
 export default {
   name: 'App',
-  mixins: [utils, logoutUserMix],
-  created() {
-    if (this.tokenIsInvalid()) {
-      this.logoutUser();
-    }
-  },
 };
 </script>
 

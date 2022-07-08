@@ -1,8 +1,8 @@
 <template>
   <div>
-    <section class="s-search">
-      <div class="empty-results">
-        <div class="txt">
+    <section class="notFound">
+      <div class="notFound__container">
+        <div class="notFound__container-message">
           <h3>Erro 404</h3>
           <p>Página não encontrada</p>
         </div>
@@ -13,16 +13,16 @@
 
 <style lang="scss">
 @import '../assets/scss/_colors.scss';
-.s-search {
+.notFound {
   margin-top: 88px;
 
-  .empty-results {
+  .notFound__container {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10rem 0px;
 
-    .txt {
+    &-message {
       display: flex;
       flex-direction: column;
       align-items: center;
