@@ -10,10 +10,8 @@
         <a class="item item__redirect" href="https://www.instagram.com/alien_art_tattoo/">
           <img src="@/assets/img/instagram.svg" alt="Instagram Redirection" />
         </a>
-        <a
-          class="item item__redirect whatsapp"
-          href="https://api.whatsapp.com/message/GBZRVMH6C43DJ1?autoload=1&app_absent=0"
-        >
+        <a class="item item__redirect whatsapp"
+          href="https://api.whatsapp.com/message/GBZRVMH6C43DJ1?autoload=1&app_absent=0">
           <img src="@/assets/img/whatsapp.svg" alt="Whatsapp Redirection" />
         </a>
       </li>
@@ -87,18 +85,32 @@
     <Feedbacks />
 
     <section class="main__contact">
-      <div class="form">
+      <form class="form" @submit.prevent="getInContact" method="POST"
+        action="https://script.google.com/macros/s/AKfycbzv1BkhY7Dxz0DP4zaq11WI5l5iSOXU5vvuJjwJZsEyFG4KV69SnOPoUECIJd4hxIqFsA/exec">
         <h3 class="form__title">CONTATE-NOS:</h3>
+
         <div class="form__name">
-          <label for="name">Nome</label>
-          <input v-model="name" type="text" name="name" id="name" />
+          <label for="name">Nome*</label>
+          <input v-model="name" type="text" name="Nome" id="name" required />
         </div>
+
+        <div class="form__email">
+          <label for="email">E-mail</label>
+          <input v-model="email" type="email" name="Email" id="email" />
+        </div>
+
         <div class="form__phone">
-          <label for="name">Mensagem</label>
-          <textarea v-model="message" />
+          <label for="phone">Telefone</label>
+          <input v-mask="'(##) # ####-####'" v-model="phone" type="tel" name="Telefone" id="phone" />
         </div>
-        <button @click="getInContact" class="form__submit">ENVIAR</button>
-      </div>
+
+        <div class="form__message">
+          <label for="message">Mensagem</label>
+          <textarea v-model="message" name="Mensagem" id="message" />
+        </div>
+
+        <button @submit.prevent="getInContact" type="submit" class="form__submit">ENVIAR</button>
+      </form>
     </section>
 
     <footer class="footer">
@@ -112,10 +124,8 @@
           <a class="item item__redirect" href="https://www.instagram.com/alien_art_tattoo/">
             <img src="@/assets/img/instagram.svg" alt="Instagram Redirection" />
           </a>
-          <a
-            class="item item__redirect whatsapp"
-            href="https://api.whatsapp.com/message/GBZRVMH6C43DJ1?autoload=1&app_absent=0"
-          >
+          <a class="item item__redirect whatsapp"
+            href="https://api.whatsapp.com/message/GBZRVMH6C43DJ1?autoload=1&app_absent=0">
             <img src="@/assets/img/whatsapp.svg" alt="Whatsapp Redirection" />
           </a>
         </li>
@@ -135,6 +145,8 @@ export default {
     return {
       isMobile: false,
       name: '',
+      email: '',
+      phone: '',
       message: '',
       videoSrc: {
         mobile:
@@ -163,8 +175,16 @@ export default {
     updateIsMobile() {
       this.isMobile = window.matchMedia('(max-width: 700px)').matches;
     },
-    getInContact() {
+    getInContact(e) {
       this.updateCaptureFormData({ name: this.name, message: this.message });
+
+      const data = new FormData(e.target);
+      const action = e.target.action;
+      fetch(action, {
+        method: 'POST',
+        body: data,
+      })
+
       this.$router.push({ name: 'Obrigado' });
     },
   },
@@ -455,7 +475,9 @@ export default {
       }
 
       &__name,
-      &__phone {
+      &__phone,
+      &__email,
+      &__message {
         display: flex;
         flex-direction: column;
         margin-bottom: 20px;

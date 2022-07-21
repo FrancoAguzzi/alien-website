@@ -16,7 +16,7 @@ export default {
   name: 'FeedbacksCard',
   props: {
     tattoo: { type: String, required: true },
-    clientIg: { type: String, required: false },
+    clientIg: { type: Object, required: false },
     clientName: { type: String, required: true },
     text: { type: String, required: true },
   },
