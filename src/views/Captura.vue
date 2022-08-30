@@ -86,7 +86,7 @@
 
     <section class="main__contact">
       <form class="form" @submit.prevent="getInContact" method="POST"
-        action="https://script.google.com/macros/s/AKfycbzICyKubnJbrEPCdHCXx5v-0KoNtsZJehFwYALL63VOSfR6eF6yBparYbYM5Lj6orQZeQ/exec">
+        action="https://script.google.com/macros/s/AKfycbzLDK8R9YY1mIfnMymdV_BvxKqiUfWJhefr-GJzgi0cx2v4cwS02n3HgH2jjuunBqPBZA/exec">
         <h3 class="form__title">CONTATE-NOS:</h3>
 
         <div class="form__name">
