@@ -86,7 +86,7 @@
 
     <section class="main__contact">
       <form class="form" @submit.prevent="getInContact" method="POST"
-        action="https://script.google.com/macros/s/AKfycbzv1BkhY7Dxz0DP4zaq11WI5l5iSOXU5vvuJjwJZsEyFG4KV69SnOPoUECIJd4hxIqFsA/exec">
+        action="https://script.google.com/macros/s/AKfycbzICyKubnJbrEPCdHCXx5v-0KoNtsZJehFwYALL63VOSfR6eF6yBparYbYM5Lj6orQZeQ/exec">
         <h3 class="form__title">CONTATE-NOS:</h3>
 
         <div class="form__name">
@@ -255,6 +255,7 @@ export default {
     }
 
     @media screen and (min-width: 1200px) {
+
       &:before,
       &:after {
         left: auto;
