@@ -394,11 +394,13 @@ export default {
         border-radius: 50%;
         align-self: flex-end;
         margin: 0 auto 10px;
-        background: url('../assets/img/rohil.webp');
-        background-size: 120% 120%;
-        background-position: -20px 50%;
+        background: url('../assets/img/rohil.jpeg');
+        background-size: cover;
+        background-position: 50%;
         shape-outside: circle(50%);
         box-shadow: inset 0px 0px 20px 20px $white;
+        outline: 10px solid $white;
+        outline-offset: -2px;
 
         @media screen and (min-width: 425px) {
           margin: 0 0 10px 30px;
