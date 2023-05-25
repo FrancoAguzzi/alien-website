@@ -1,6 +1,6 @@
 <template>
   <router-view :key="$route.path" v-slot="{ Component }">
-      <component :is="Component"></component>
+    <component :is="Component"></component>
   </router-view>
 </template>
 
@@ -16,8 +16,14 @@ export default {
 
 body {
   margin: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
   font-family: 'Proxima Nova Bold';
   color: $dark-900;
+}
+
+iframe {
+  max-width: 100vw;
 }
 
 a {
@@ -36,6 +42,7 @@ a {
       outline: 2px solid $dark-900;
     }
   }
+
   .flickity-page-dots {
     bottom: -40px;
   }
@@ -44,6 +51,7 @@ a {
     .flickity-button.flickity-prev-next-button {
       top: 50%;
     }
+
     .flickity-page-dots {
       bottom: -25px;
     }

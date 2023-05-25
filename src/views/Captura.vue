@@ -32,6 +32,14 @@
       </h2>
     </section>
 
+    <section class="main__agenda">
+      <h1 class="main__agenda-title">
+        Agenda aberta para 2023!
+      </h1>
+
+      <AgendasList />
+    </section>
+
     <!-- TEXTO + VIDEO -->
     <!-- <section class="main__welcome">
       <div class="main__welcome-wrapper">
@@ -60,6 +68,11 @@
     </section> -->
 
     <!-- ROHIL + CONTATO -->
+
+    <section class="main__poster">
+      <div class="main__poster-image"></div>
+    </section>
+
     <section class="main__presentation">
       <h3 class="pres__title">ROHIL GUERREIRO</h3>
       <div>
@@ -76,10 +89,6 @@
           <b>potencializando a pessoa que você é.</b>
         </p>
       </div>
-    </section>
-
-    <section class="main__poster">
-      <div class="main__poster-image"></div>
     </section>
 
     <Feedbacks />
@@ -137,10 +146,11 @@
 <script>
 import { mapActions } from 'vuex';
 import Feedbacks from '@/components/Feedbacks.vue';
+import AgendasList from '@/components/AgendasList.vue';
 
 export default {
   name: 'Captura',
-  components: { Feedbacks },
+  components: { Feedbacks, AgendasList },
   data() {
     return {
       isMobile: false,
@@ -281,6 +291,34 @@ export default {
         font-size: 32px;
         line-height: 38px;
         padding-bottom: 160px;
+      }
+    }
+  }
+
+  &__agenda {
+    background-image: linear-gradient(to right top, #212223, #4c4d4e, #7c7d7d, #b0b0b0, #e6e6e6);
+    text-align: center;
+    max-width: 1024px;
+    transition: all;
+    margin: 0 auto 120px;
+
+
+    &-title {
+      font-size: 36px;
+      line-height: 38px;
+      padding: 24px 40px;
+      color: $white;
+      position: relative;
+      text-shadow: 2px 2px $dark-500;
+
+      &:after {
+        position: absolute;
+        left: 22%;
+        bottom: 0;
+        height: 3px;
+        width: 120%;
+        background-color: $dark-900;
+        content: '';
       }
     }
   }
