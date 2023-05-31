@@ -7,27 +7,24 @@
 </template>
 
 <script>
+import { citiesList } from '../utils';
 const cloudName = process.env.CLOUDINARY_CLOUD_NAME;
-const uploadPreset = process.env.CLOUDINARY_UPLOAD_PREST;
 
 export default {
   name: "UploadWidget",
   data: () => ({
     myWidget: null,
+    citiesList
   }),
   props: {
     leadName: String,
-    leadPhone: String
-  },
-  computed: {
-    folderPath() {
-      return `/website-leads/${this.leadName || 'unknown'}`;
-    }
+    leadPhone: String,
+    city: String
   },
   methods: {
     open() {
       if (this.leadName && this.leadPhone.length === 15) {
-        this.myWidget?.open();
+        this.updateWidget()
       } else {
         alert('Por favor, preencha seu nome e telefone primeiro 👽')
       }
@@ -36,11 +33,11 @@ export default {
       this.myWidget = cloudinary.createUploadWidget(
         {
           cloudName: cloudName,
-          uploadPreset: uploadPreset,
+          uploadPreset: this.citiesList.find(city => city.name === this.city).uploadPreset,
           cropping: true,
           multiple: true,
-          folder: this.folderPath,
-          tags: ["lead"], //add the given tags to the uploaded files
+          folder: `/${this.leadName}`,
+          tags: ["agenda_lead"], //add the given tags to the uploaded files
           clientAllowedFormats: ["images"], //restrict uploading to image files only
           maxImageFileSize: 5000000,  //restrict file size to less than 2MB
           maxImageWidth: 2000, //Scales the image down to a width of 2000 pixels before uploading
@@ -49,22 +46,11 @@ export default {
         (error, result) => {
           if (!error && result && result.event === "success") {
             console.log("Done! Here is the image info: ", result.info);
-            document
-              .getElementById("uploadedimage")
-              .setAttribute("src", result.info.secure_url);
           }
         }
       );
-    }
-  },
-  watch: {
-    leadName: {
-      handler(val) {
-        if (!!val) {
-          this.updateWidget();
-        }
-      },
-      immediate: true // Add this line to call the handler immediately
+
+      this.myWidget?.open();
     }
   },
 }

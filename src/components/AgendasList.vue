@@ -1,16 +1,16 @@
 <template>
   <div>
-    <div v-for="( { name }, index) in citiesList" :key="index" class="accordion-container">
+    <div v-for="( { name: cityName }, index) in citiesList" :key="index" class="accordion-container">
       <div>
-        <button @click="toggleAccordion(name)" class="accordion-trigger">
+        <button @click="toggleAccordion(cityName)" class="accordion-trigger">
           <h2>
-            {{ name }}
+            {{ cityName }}
           </h2>
           <div>
-            {{ accordionOpen === name ? 'x' : '+' }}
+            {{ accordionOpen === cityName ? 'x' : '+' }}
           </div>
         </button>
-        <div v-show="accordionOpen === name" class="accordion-content">
+        <div v-show="accordionOpen === cityName" class="accordion-content">
           <form class="form" method="POST" @submit.prevent="submitForm"
             action="https://script.google.com/macros/s/AKfycbw70Ozj5ZKUIwIDpWnelsLjGbnj130UTj2etT31jxHL-ka8_tJS494U_FSW5QCrPnA2Rg/exec">
             <div class="form-wrapper">
@@ -34,7 +34,8 @@
                   </div>
                   <div class="form-col">
                     <label for="cidade" class="form-label">Cidade</label>
-                    <input readonly type="text" id="cidade" name="cidade" :value="name" class="form-input form-readonly">
+                    <input readonly type="text" id="cidade" name="cidade" :value="cityName"
+                      class="form-input form-readonly">
                   </div>
                 </div>
 
@@ -50,7 +51,7 @@
                 <div class="form-col">
                   <label for="referencias" class="form-label">Referências</label>
 
-                  <UploadWidget :leadName="form.name" :leadPhone="form.phone" />
+                  <UploadWidget :leadName="form.name" :leadPhone="form.phone" :city="cityName" />
                 </div>
 
                 <div class="form__description">
@@ -72,6 +73,7 @@
 
 <script>
 import UploadWidget from '@/components/UploadWidget.vue';
+import { citiesList } from '../utils';
 
 export default {
   name: 'AgendasList',
@@ -89,20 +91,7 @@ export default {
         references: [],
         description: '',
       },
-      citiesList: [
-        {
-          name: "Florianópolis",
-          agendaOpen: true
-        },
-        {
-          name: "São Paulo",
-          agendaOpen: false
-        },
-        {
-          name: "Rio de Janeiro",
-          agendaOpen: true
-        }
-      ]
+      citiesList
     };
   },
   methods: {
