@@ -16,8 +16,8 @@ export default {
     myWidget: null,
   }),
   props: {
-    msg: String,
-    leadName: String
+    leadName: String,
+    leadPhone: String
   },
   computed: {
     folderPath() {
@@ -26,7 +26,11 @@ export default {
   },
   methods: {
     open() {
-      this.myWidget?.open();
+      if (this.leadName && this.leadPhone.length === 15) {
+        this.myWidget?.open();
+      } else {
+        alert('Por favor, preencha seu nome e telefone primeiro 👽')
+      }
     },
     updateWidget() {
       this.myWidget = cloudinary.createUploadWidget(

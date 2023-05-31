@@ -50,7 +50,7 @@
                 <div class="form-col">
                   <label for="referencias" class="form-label">Referências</label>
 
-                  <UploadWidget :leadName="form.name" />
+                  <UploadWidget :leadName="form.name" :leadPhone="form.phone" />
                 </div>
 
                 <div class="form__description">

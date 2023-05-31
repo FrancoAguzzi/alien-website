@@ -301,6 +301,7 @@ export default {
     max-width: 1024px;
     transition: all;
     margin: 0 auto 120px;
+    overflow-x: hidden;
 
 
     &-title {
@@ -460,12 +461,26 @@ export default {
 
       &__description {
         color: $dark-300;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         line-height: 130%;
         max-width: 1024px;
+        text-align: justify;
 
         b {
           color: $dark-900;
+        }
+      }
+
+      @media screen and (min-width: 425px) {
+        &__description {
+          text-align: left;
+          font-size: 1rem;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        &__description {
+          font-size: 1.2rem
         }
       }
 
