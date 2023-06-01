@@ -12,7 +12,7 @@
         </button>
         <div v-show="accordionOpen === cityName" class="accordion-content">
           <form v-if="currentStep === 1" class="form" method="POST" @submit.prevent="submitForm"
-            action="https://script.google.com/macros/s/AKfycbzFN7fwppoquz9SwCcdgKxiOb1eLaIli9ZUKcMliJL7MjeHnfic9UChrODMrSaetdxJkw/exec">
+            action="https://script.google.com/macros/s/AKfycbwrWFjnEU7mUkvwWjRMtvk45AZ-spG40f5K3LREdPiQAvScMtgitOiKsxX2uwOBrX8TSw/exec">
             <div class="form-wrapper">
               <div class="form-col form__firstCol">
                 <div class="form-row">
@@ -123,6 +123,8 @@ export default {
         headers,
       }).then(() => {
         this.currentStep = 2;
+      }).catch(() => {
+        alert('Infelizmente não foi possível submeter o formulário. Entre em contato conosco pelo Instagram @alienstudio.art 👽')
       }).finally(() => {
         this.loadingFormSubmit = false
       });

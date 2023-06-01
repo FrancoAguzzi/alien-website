@@ -95,7 +95,7 @@
 
     <section class="main__contact">
       <form class="form" @submit.prevent="getInContact" method="POST"
-        action="https://script.google.com/macros/s/AKfycbzFN7fwppoquz9SwCcdgKxiOb1eLaIli9ZUKcMliJL7MjeHnfic9UChrODMrSaetdxJkw/exec">
+        action="https://script.google.com/macros/s/AKfycbz3FaK0oeJw7OB66ukFNPFNpxelpkYiHfRJH4higJhGl9VtKNB2Qog2zn505G8nIzHtjQ/exec">
         <h3 class="form__title">CONTATE-NOS:</h3>
 
         <div class="form__name">
@@ -115,10 +115,12 @@
 
         <div class="form__message">
           <label for="message">Mensagem</label>
-          <textarea v-model="message" name="Mensagem" id="message" />
+          <textarea v-model="message" name="Mensagem" id="message"></textarea>
         </div>
 
-        <button @submit.prevent="getInContact" type="submit" class="form__submit">ENVIAR</button>
+        <button @submit.prevent="getInContact" type="submit" class="form__submit">
+          {{ loadingFormSubmit ? 'ENVIANDO DADOS...' : 'ENVIAR' }}
+        </button>
       </form>
     </section>
 
@@ -154,6 +156,7 @@ export default {
   data() {
     return {
       isMobile: false,
+      loadingFormSubmit: false,
       name: '',
       email: '',
       phone: '',
@@ -186,16 +189,27 @@ export default {
       this.isMobile = window.matchMedia('(max-width: 700px)').matches;
     },
     getInContact(e) {
+      this.loadingFormSubmit = true;
       this.updateCaptureFormData({ name: this.name, message: this.message });
 
       const data = new FormData(e.target);
       const action = e.target.action;
+      const headers = new Headers({
+        'Access-Control-Allow-Origin': '*'
+      })
       fetch(action, {
         method: 'POST',
+        mode: 'no-cors',
         body: data,
+        headers,
       }).then(() => {
-        // this.$router.push({ name: 'Obrigado' });
+        this.$router.push({ name: 'Obrigado' });
+      }).catch(() => {
+        alert('Infelizmente não foi possível submeter o formulário. Entre em contato conosco pelo Instagram @alienstudio.art 👽')
       })
+        .finally(() => {
+          this.loadingFormSubmit = false;
+        })
 
     },
   },
