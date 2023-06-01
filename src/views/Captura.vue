@@ -95,7 +95,7 @@
 
     <section class="main__contact">
       <form class="form" @submit.prevent="getInContact" method="POST"
-        action="https://script.google.com/macros/s/AKfycbzLDK8R9YY1mIfnMymdV_BvxKqiUfWJhefr-GJzgi0cx2v4cwS02n3HgH2jjuunBqPBZA/exec">
+        action="https://script.google.com/macros/s/AKfycbzFN7fwppoquz9SwCcdgKxiOb1eLaIli9ZUKcMliJL7MjeHnfic9UChrODMrSaetdxJkw/exec">
         <h3 class="form__title">CONTATE-NOS:</h3>
 
         <div class="form__name">
@@ -193,9 +193,10 @@ export default {
       fetch(action, {
         method: 'POST',
         body: data,
+      }).then(() => {
+        // this.$router.push({ name: 'Obrigado' });
       })
 
-      this.$router.push({ name: 'Obrigado' });
     },
   },
 };

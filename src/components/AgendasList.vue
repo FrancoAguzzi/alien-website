@@ -6,12 +6,12 @@
           <h2>
             {{ cityName }}
           </h2>
-          <div>
+          <div :class="accordionOpen === cityName ? 'close-icon' : 'open-icon'">
             {{ accordionOpen === cityName ? 'x' : '+' }}
           </div>
         </button>
         <div v-show="accordionOpen === cityName" class="accordion-content">
-          <form class="form" method="POST" @submit.prevent="submitForm"
+          <form v-if="currentStep === 1" class="form" method="POST" @submit.prevent="submitForm"
             action="https://script.google.com/macros/s/AKfycbw70Ozj5ZKUIwIDpWnelsLjGbnj130UTj2etT31jxHL-ka8_tJS494U_FSW5QCrPnA2Rg/exec">
             <div class="form-wrapper">
               <div class="form-col form__firstCol">
@@ -48,23 +48,25 @@
               </div>
 
               <div class="form__secondCol">
-                <div class="form-col">
-                  <label for="referencias" class="form-label">Referências</label>
-
-                  <UploadWidget :leadName="form.name" :leadPhone="form.phone" :city="cityName" />
-                </div>
-
                 <div class="form__description">
                   <div class="form-col">
-                    <label for="descricao" class="form-label">Breve descrição</label>
+                    <label for="descricao" class="form-label">Breve descrição da ideia</label>
                     <textarea id="descricao" name="descricao" v-model="form.description" class="form-input"></textarea>
                   </div>
+                  <button @submit.prevent="submitForm" type="submit" class="form-submit">
+                    {{ loadingFormSubmit ? 'Enviando dados...' : 'Enviar' }}
+                  </button>
                 </div>
               </div>
             </div>
-
-            <button @submit.prevent="submitForm" type="submit" class="form-submit">Enviar</button>
           </form>
+          <div v-else class="form-col form-second-step">
+            <h2>Ficamos felizes em receber o seu contato 👽</h2>
+            <h4>Nesta etapa você poderá submeter valiosas referências para o desenvolvimento de
+              sua ideia:</h4>
+
+            <UploadWidget :leadName="form.name" :leadPhone="form.phone" :city="cityName" />
+          </div>
         </div>
       </div>
     </div>
@@ -82,7 +84,9 @@ export default {
   },
   data() {
     return {
+      loadingFormSubmit: false,
       accordionOpen: undefined,
+      currentStep: 1,
       form: {
         phone: '',
         name: '',
@@ -106,12 +110,17 @@ export default {
       }
     },
     submitForm(e) {
+      this.loadingFormSubmit = true
       const data = new FormData(e.target);
       const action = e.target.action;
       fetch(action, {
         method: 'POST',
         body: data,
-      })
+      }).then(() => {
+        this.currentStep = 2;
+      }).finally(() => {
+        this.loadingFormSubmit = false
+      });
     },
   },
 };
@@ -119,6 +128,30 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/scss/variables.scss';
+
+.close-icon {
+  font-family: 'Arial';
+  color: $dark-50;
+  transition: all .4s;
+
+  &:hover {
+    color: $dark-900;
+    transition: all .4s;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-right: 16px;
+
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .open-icon {
+    margin-right: 16px;
+  }
+
+}
+
 
 .accordion {
   &-trigger {
@@ -133,13 +166,19 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 60px;
+    padding: 0 40px;
     width: 100%;
+
+
+    @media screen and (min-width: 768px) {
+      padding: 0 60px;
+    }
 
     >div {
       font-size: 28px;
     }
   }
+
 
   &-container {
     border: 2px solid black;
@@ -149,22 +188,33 @@ export default {
       border-bottom: 3px solid $dark-900;
     }
   }
+
+  &-content {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100vw;
+  }
 }
 
 .form {
   display: block;
   margin: 0 auto;
-  padding: 0 60px 40px;
+  padding: 0 20px 20px;
+
+  @media screen and (min-width: 768px) {
+    padding: 0 60px 40px;
+
+    &-wrapper {
+      flex-direction: row;
+      gap: 40px;
+    }
+  }
 
   &-wrapper {
     width: calc(100% - 20px);
     display: flex;
     flex-direction: column;
 
-    @media screen and (min-width: 768px) {
-      flex-direction: row;
-      gap: 80px;
-    }
   }
 
   &-row {
@@ -188,6 +238,7 @@ export default {
   }
 
   &-input {
+    box-sizing: border-box;
     padding: 10px;
     border: 2px solid $dark-900;
     border-radius: 5px;
@@ -212,6 +263,13 @@ export default {
 
   &__description {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &>* {
+      width: 100%;
+    }
   }
 
   &-submit {
@@ -229,6 +287,20 @@ export default {
       background-color: $dark-600;
       transition: all 0.2s ease-in-out;
       cursor: pointer;
+    }
+  }
+
+  &-second-step {
+    margin: 0 40px 40px;
+    max-width: 80vw;
+
+    @media screen and (min-width: 768px) {
+      margin: 0 60px 60px;
+
+    }
+
+    h4 {
+      margin-top: 0;
     }
   }
 }

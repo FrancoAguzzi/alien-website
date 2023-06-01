@@ -1,7 +1,7 @@
 <template>
   <div class="cloudinary-widget">
     <button @click="open" id="upload_widget" class="cloudinary-button">
-      Submeter imagens
+      Selecionar imagens
     </button>
   </div>
 </template>
