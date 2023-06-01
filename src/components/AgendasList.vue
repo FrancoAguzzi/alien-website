@@ -12,7 +12,7 @@
         </button>
         <div v-show="accordionOpen === cityName" class="accordion-content">
           <form v-if="currentStep === 1" class="form" method="POST" @submit.prevent="submitForm"
-            action="https://script.google.com/macros/s/AKfycbw70Ozj5ZKUIwIDpWnelsLjGbnj130UTj2etT31jxHL-ka8_tJS494U_FSW5QCrPnA2Rg/exec">
+            action="https://script.google.com/macros/s/AKfycbzFN7fwppoquz9SwCcdgKxiOb1eLaIli9ZUKcMliJL7MjeHnfic9UChrODMrSaetdxJkw/exec">
             <div class="form-wrapper">
               <div class="form-col form__firstCol">
                 <div class="form-row">
@@ -113,9 +113,14 @@ export default {
       this.loadingFormSubmit = true
       const data = new FormData(e.target);
       const action = e.target.action;
+      const headers = new Headers({
+        'Access-Control-Allow-Origin': '*'
+      })
       fetch(action, {
         method: 'POST',
+        mode: 'no-cors',
         body: data,
+        headers,
       }).then(() => {
         this.currentStep = 2;
       }).finally(() => {
