@@ -34,7 +34,7 @@
                   </div>
                   <div class="form-col">
                     <label for="cidade" class="form-label">Cidade</label>
-                    <input readonly type="text" id="cidade" name="cidade" :value="cityName"
+                    <input readonly tabindex="-1" type="text" id="cidade" name="cidade" :value="cityName"
                       class="form-input form-readonly">
                   </div>
                 </div>
@@ -61,9 +61,13 @@
             </div>
           </form>
           <div v-else class="form-col form-second-step">
-            <h2>Ficamos felizes em receber o seu contato 👽</h2>
-            <h4>Nesta etapa você poderá submeter valiosas referências para o desenvolvimento de
-              sua ideia:</h4>
+            <h3>Ficamos felizes por você ter chegado até aqui...</h3>
+            <h2>
+              <span>👽</span>
+              <p>
+                Em breve nossa equipe entrará em contato com você.
+              </p>
+            </h2>
 
             <UploadWidget :leadName="form.name" :leadPhone="form.phone" :city="cityName" />
           </div>
@@ -84,6 +88,7 @@ export default {
   },
   data() {
     return {
+      submittedForm: false,
       loadingFormSubmit: false,
       accordionOpen: undefined,
       currentStep: 1,
@@ -92,17 +97,16 @@ export default {
         name: '',
         email: '',
         size: '',
-        references: [],
         description: '',
       },
       citiesList
     };
   },
   methods: {
-    handleFileUpload(event) {
-      this.form.references = [...event.target.files];
-    },
     toggleAccordion(name) {
+      if (this.accordionOpen !== undefined && this.submittedForm) {
+        return
+      }
       if (this.accordionOpen === name) {
         this.accordionOpen = undefined;
       } else {
@@ -123,6 +127,7 @@ export default {
         headers,
       }).then(() => {
         this.currentStep = 2;
+        this.submittedForm = true
       }).catch(() => {
         alert('Infelizmente não foi possível submeter o formulário. Entre em contato conosco pelo Instagram @alienstudio.art 👽')
       }).finally(() => {
@@ -255,6 +260,7 @@ export default {
   &-readonly {
     background-color: $dark-10;
     border-color: $dark-50;
+    pointer-events: none;
   }
 
   &__secondCol {
@@ -300,14 +306,37 @@ export default {
   &-second-step {
     margin: 0 40px 40px;
     max-width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     @media screen and (min-width: 768px) {
       margin: 0 60px 60px;
-
+      align-items: flex-start;
     }
 
-    h4 {
-      margin-top: 0;
+    h2 {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      margin: 12px 0;
+
+
+      @media screen and (min-width: 768px) {
+        flex-direction: row;
+
+        span {
+          margin-right: 16px;
+        }
+      }
+    }
+
+    h3 {
+      text-align: center;
+      font-family: 'Proxima Nova Regular';
+      margin-bottom: 0;
     }
   }
 }
@@ -315,5 +344,6 @@ export default {
 textarea {
   resize: none;
   min-height: 98px;
+  font-family: 'Proxima Nova Regular';
 }
 </style>
